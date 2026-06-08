@@ -52,6 +52,36 @@ table.trophy td {
 // Import partials from the `minima` theme.
 @import "minima";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--navy-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(1.35rem, 2.4vw, 1.6rem);
+}
+
+h2 {
+    font-size: clamp(1.15rem, 2vw, 1.3rem);
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 0.95rem;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
 :root {
     --blue-color: #025BFF;
     --blue-color-rgb: 2, 91, 255;
@@ -62,13 +92,16 @@ table.trophy td {
 }
 
 .callout {
+    padding: 1rem;
+    border-left: 4px solid;
+    border-radius: 6px;
+}
+
+.callout--with-media {
     display: grid;
     grid-template-columns: 170px 1fr;
     gap: 1rem;
     align-items: center;
-    padding: 1rem;
-    border-left: 4px solid;
-    border-radius: 6px;
 }
 
 .callout--blue {
@@ -92,6 +125,7 @@ table.trophy td {
     display: block;
 }
 
+
 code {
     background: rgba(var(--green-color-rgb), 0.05);
     border-color: rgba(var(--green-color-rgb), 0.12);
@@ -114,7 +148,7 @@ body {
 }
 
 @media (max-width: 799px) {
-    .callout {
+    .callout--with-media {
         grid-template-columns: 1fr;
     }
 }

@@ -9,25 +9,32 @@ permalink: /
 
 
 
-<div style="font-size: 1.5rem; line-height: 1.5">
+<!-- <div style="font-size: 1.5rem; line-height: 1.5">
 <b>Answer Set Programming</b> (ASP) offers a simple and powerful modeling language to solve combinatorial problems.
 With our tools you can concentrate on an actual problem, rather than a smart way of implementing it.
-</div>
+</div> -->
+
+Potassco, the Potsdam Answer Set Solving Collection, bundles tools for Answer Set Programming developed at the [University of Potsdam](https://uni-potsdam.de).
+
+Answer Set Programming (ASP) offers a simple and powerful modeling language to solve combinatorial problems.
+With our tools you can concentrate on an actual problem, rather than a smart way of implementing it.
+Also see the list of [related ASP projects](/related/) from other research groups.
+
 
 <div style="height: 40pt;"></div>
 
 
-<!-- #### Learning ASP -->
-**Getting Started with ASP**
+#### Getting Started with ASP
+<!-- **Getting Started with ASP** -->
 
 - A comprehensive documentation of our software can be found in the [Potassco guide](https://github.com/potassco/guide/releases/).
 - Further resources to learn more about ASP are available in the [documentation](/doc/) section of this website.
 <!-- - To get a quick first impression, you may want to experiment with [running clingo](/clingo/run/) in your browser. -->
 
 
-<!-- #### Our software -->
+#### Our software
 
-**Our Software**
+<!-- **Our Software** -->
 
 Our software is open source!
 The source code of our projects is available on [GitHub](https://github.com/potassco/).
@@ -39,7 +46,6 @@ Our core system are:
     * [clasp](/clasp/) is a solver (powering the search in clingo).
 
 We have developed a comprehensive [suite of systems](/systems/) to expand modeling capabilities and streamline integration.
-
 
 <div style="height: 20pt;"></div>
 

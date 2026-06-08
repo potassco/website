@@ -26,6 +26,13 @@ Our systems are open source, feel free to contribute and report issues.
 The source code of our projects is available on [GitHub](https://github.com/potassco/) and [Legacy code](https://sourceforge.net/p/potassco/code).
 
 
+{% include callout.html
+   tone="blue"
+   link="https://www.uni-potsdam.de/"
+   text='Our systems won shiny awards in different competitions.
+Check out our <a href="/trophies/">trophy page</a>.' %}
+
+<div style="height: 20pt;"></div>
 
 <div id="search_area">
 	<div class="search_box">
@@ -36,13 +43,13 @@ The source code of our projects is available on [GitHub](https://github.com/pota
 </div>
 
 <div id="search_results_area" style="display: none;">
-	<h2 id="search_results_heading" style="display:none">Search results: <span id="result_count"></span></h2>
+	<h3 id="search_results_heading" style="display:none">Search results: <span id="result_count"></span></h3>
 	<ul id="search_results" class="posts"></ul>
 </div>
 
 <div id="systems_sections">
 
-<h2 id="core-systems">Core systems</h2>
+<h3 id="core-systems">Core systems</h3>
 
 <h4>Our core systems.</h4>
 
@@ -52,7 +59,7 @@ The source code of our projects is available on [GitHub](https://github.com/pota
 {% endfor %}
 </ul>
 
-<h2 id="stable-systems">Stable systems</h2>
+<h3 id="stable-systems">Stable systems</h3>
 
 <h4>Stable up to date systems that are currently maintained and supported.</h4>
 
@@ -62,7 +69,7 @@ The source code of our projects is available on [GitHub](https://github.com/pota
 {% endfor %}
 </ul>
 
-<h2 id="experimental-systems">Experimental systems</h2>
+<h3 id="experimental-systems">Experimental systems</h3>
 
 <h4>These are either small utilities or projects in an early or unfinished development phase.</h4>
 
@@ -72,7 +79,7 @@ The source code of our projects is available on [GitHub](https://github.com/pota
 {% endfor %}
 </ul>
 
-<h2 id="cemetery">Cemetery</h2>
+<h3 id="cemetery">Cemetery</h3>
 
 <h4>Superseded programs that no longer belong to the Potassco suite.</h4>
 
