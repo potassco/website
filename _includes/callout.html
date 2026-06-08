@@ -1,0 +1,14 @@
+<div class="callout callout--{{ include.tone | default: 'blue' }}">
+    {% if include.image or include.link %}
+    <div class="callout__media">
+        {% if include.link %}<a href="{{ include.link }}">{% endif %}
+            {% if include.image %}
+            <img class="callout__image" src="{{ include.image }}" alt="{{ include.alt | default: '' }}">
+            {% endif %}
+            {% if include.link %}</a>{% endif %}
+    </div>
+    {% endif %}
+    <div class="callout__content">
+        {{ include.text }}
+    </div>
+</div>

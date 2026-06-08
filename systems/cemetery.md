@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: Cemetery
-permalink: /cemetery/
-category: cemetery
+permalink: /systems/cemetery/
+category: systems/cemetery/
 sorting: alpha
 ---
 
