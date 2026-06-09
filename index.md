@@ -27,9 +27,9 @@ Also see the list of [related ASP projects](/related/) from other research group
 #### Getting Started with ASP
 <!-- **Getting Started with ASP** -->
 
-- Browse the on-site [Potassco guide](/guide/) and its chapters for a direct starting point.
-You can also download the [Potassco guide as PDF](https://github.com/potassco/guide/releases/).
-- Further resources to learn more about ASP are available in the [documentation](/doc/) section of this website.
+- Browse the on-site interactive [Potassco guide](/guide/) and its chapters for a direct starting point.
+You can also download the [PDF guide](https://github.com/potassco/guide/releases/).
+- Further resources to learn more about ASP are available in [documentation](/doc/).
 <!-- - To get a quick first impression, you may want to experiment with [running clingo](/clingo/run/) in your browser. -->
 
 

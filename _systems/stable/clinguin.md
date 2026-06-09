@@ -10,7 +10,7 @@ UIs are defined as sets of facts, which are then rendered by a frontend to provi
 
 # Download
 
-- Source code and binary releases are on github: [github.com/potassco/clinguin](https://github.com/potassco/clinguin).
+- Source code and binary releases are on GitHub: [github.com/potassco/clinguin](https://github.com/potassco/clinguin).
 
 # Documentation
 
@@ -19,4 +19,4 @@ UIs are defined as sets of facts, which are then rendered by a frontend to provi
 # Citing
 
 - Alexander Beiser, Susana Hahn, Torsten Schaub
-  ASP-driven User-interaction with Clinguin, ICLP-TC, 2024
+  [ASP-driven User-interaction with Clinguin]({{ site.publicationurl }}/#DBLP:journals/corr/abs-2502-09222), ICLP-TC, 2024
