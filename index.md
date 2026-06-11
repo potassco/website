@@ -39,21 +39,21 @@ permalink: /
 
 {% include callout.html
    tone="navy"
-   image="/images/uni-potsdam.png"
+   image="/assets/images/uni-potsdam.png"
    alt="University of Potsdam logo"
    link="https://www.uni-potsdam.de/"
    text='Our <a href="https://www.cs.uni-potsdam.de/wv/">Research Group</a> at the <a href="https://www.uni-potsdam.de/">University of Potsdam</a> works in the field of Knowledge Representation and Reasoning, with a focus on ASP.' %}
 
 {% include callout.html
    tone="blue"
-   image="/images/psg_rgb_2colors_digital.png"
+   image="/assets/images/psg_rgb_2colors_digital.png"
    alt="Potassco Solutions logo"
    link="https://potassco.com"
    text='Our spin-off, <a href="https://potassco.com">Potassco Solutions</a> provides custom integration and professional support for industrial applications.' %}
 
 {% include callout.html
    tone="green"
-   image="/images/pt_rgb_2colors_digital.svg"
+   image="/assets/images/pt_rgb_2colors_digital.svg"
    alt="Potassco Technology logo"
    link="https://potassco.com"
    text='Our <a href="/systems/">open source systems</a> for ASP, providing a large tool-suite to simplify modeling and integration in various applications.' %}

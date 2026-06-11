@@ -11,11 +11,9 @@
   {% assign custom_url = site.url | append: site.baseurl %}
   {% assign full_base_url = custom_url | default: site.github.url %}
   {% assign base_css = "/assets/main.css" | prepend: full_base_url %}
-  {% assign main_css = "/css/main.css" | prepend: full_base_url %}
   {% assign feed_url = "/feed.xml" | prepend: full_base_url %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="{{ base_css }}">
-  <link rel="stylesheet" href="{{ main_css }}">
   {% for css in page.css %}
   <link rel="stylesheet" href="{{ css | prepend: full_base_url }}">
   {% endfor %}

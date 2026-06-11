@@ -145,10 +145,10 @@ const Clingo = (() => {
 
         if (py) {
             ispy = true
-            worker = new Worker('/js/pyworker.js');
+            worker = new Worker('/assets/js/pyworker.js');
         } else {
             ispy = false
-            worker = new Worker('/js/worker.js');
+            worker = new Worker('/assets/js/worker.js');
         }
 
         worker.onmessage = function (e) {

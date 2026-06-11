@@ -155,6 +155,6 @@ Check out our <a href="/trophies/">trophy page</a>.' %} -->
 		searchClear.on('click', clear);
 	});
 </script>
-<script type="text/javascript" src="{{ "/js/jquery.min.js" | prepend: full_base_url }}" charset="utf-8"></script>
-<script type="text/javascript" src="{{ "/js/json_search.0.9.0.js" | prepend: full_base_url }}" charset="utf-8"></script>
+<script type="text/javascript" src="{{ "/assets/js/jquery.min.js" | prepend: full_base_url }}" charset="utf-8"></script>
+<script type="text/javascript" src="{{ "/assets/js/json_search.0.9.0.js" | prepend: full_base_url }}" charset="utf-8"></script>
 

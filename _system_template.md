@@ -3,6 +3,7 @@ layout: system
 title: <fillname>
 summary: <fillsummary>
 state: experimental
+permalink: /labs/<fillname>/
 ---
 
 <filldescription>

@@ -2,7 +2,7 @@
 layout: page
 title: Running clingo
 css:
-  - /css/clingo.css
+- /assets/css/clingo.css
 permalink: /clingo/run/
 ---
 
@@ -44,8 +44,7 @@ motive(sally).
 guilty(harry).
 
 % encoding
-innocent(Suspect) :- motive(Suspect), not guilty(Suspect).</pre
-  >
+innocent(Suspect) :- motive(Suspect), not guilty(Suspect).</pre>
 
   <ul class="hlist">
     <li><b>Configuration:</b></li>
@@ -62,22 +61,15 @@ innocent(Suspect) :- motive(Suspect), not guilty(Suspect).</pre
     <li><input type="checkbox" id="stats" />&nbsp;statistics</li>
     <li class="switch-item">
       <div class="language-switch">
-        <label class="switch"
-          ><input type="checkbox" /><span class="slider round"></span
-        ></label>
+        <label class="switch"><input type="checkbox" /><span class="slider round"></span></label>
         <span class="label">lua</span>
       </div>
     </li>
   </ul>
 
-  <input
-    type="button"
-    id="clingoRun"
-    value="&#9658;&nbsp;Run!"
-    onclick="Clingo.run()"
-  />
+  <input type="button" id="clingoRun" value="&#9658;&nbsp;Run!" onclick="Clingo.run()" />
   <pre id="output" class="code"></pre>
 </div>
 
-<script type="text/javascript" src="/js/ace.js" charset="utf-8"></script>
-<script type="text/javascript" src="/js/module.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/ace.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/module.js" charset="utf-8"></script>
