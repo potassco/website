@@ -28,8 +28,6 @@ publicationurl: "https://www.cs.uni-potsdam.de/wv/publications"
 markdown: kramdown
 theme: minima
 
-collections_dir: systems
-
 collections:
   systems:
     output: true

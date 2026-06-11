@@ -13,7 +13,7 @@ search_placeholder: Search FAQs
 
 ## Before asking for help
 
-Be sure to first take a look at the [documentation page](/resources/) especially the [guide](/guide).
+Be sure to first take a look at the [resources page](/resources/) especially the [guide](/guide).
 
 ## Found a bug?
 

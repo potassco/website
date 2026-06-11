@@ -41,13 +41,14 @@ layout: default
     {% assign entries = weighted_entries %}
     {% endif %}
 
-    <div id="search_area">
-      <div class="search_box">
-        <span class="search_icon" aria-hidden="true"></span>
-        <input id="search" type="search" placeholder="{{ page.search_placeholder | default: 'Search' }}">
-        <button class="search_clear" type="button" aria-label="Clear search" style="display: none;">&times;</button>
-      </div>
-    </div>
+    <!-- <div id="search_area">
+            <div class="search_box">
+                <span class="search_icon" aria-hidden="true"></span>
+                <input id="search" type="search" placeholder="{{ page.search_placeholder | default: 'Search' }}">
+                <button class="search_clear" type="button" aria-label="Clear search"
+                    style="display: none;">&times;</button>
+            </div>
+        </div> -->
 
     <div id="search_results_area">
       <h2 id="search_results_heading" style="display:none">Search results: <span id="result_count"></span></h2>
