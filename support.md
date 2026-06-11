@@ -29,9 +29,9 @@ You can reach out to us via email at <a href="mailto:potassco-users@lists.source
    tone="blue"
    icon='<i class="fa-solid fa-envelope"></i>'
    link="https://sourceforge.net/p/potassco/mailman/"
-   text='You can also sign up to this <a href="https://sourceforge.net/p/potassco/mailman/">mailing lists</a> hosted on sourceforge. <br>
-  The potassco-users list is for all kinds of questions about our tools
-  and the potassco-announce list is a read-only low frequency list where we announce new releases.' %}
+   text='You can also sign up our <a href="https://sourceforge.net/p/potassco/mailman/">mailing lists</a> hosted on sourceforge. <br>
+  The <i>potassco-users</i> list is for all kinds of questions about our tools
+  and the <i>potassco-announce</i> list is a read-only low frequency list where we announce new releases.' %}
 
 ## Frequently Asked Questions
 

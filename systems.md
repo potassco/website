@@ -28,7 +28,7 @@ permalink: /systems/
    link="https://github.com/potassco/"
     icon='<i class="fa-brands fa-github"></i>'
    text='Our systems are <b>open source</b>, feel free to contribute and report issues.
-The source code of our projects is available on <a href="https://github.com/potassco/">GitHub</a> and <a href="https://sourceforge.net/p/potassco/code">Legacy code</a>.' %}
+The source code of our projects is available on <a href="https://github.com/potassco/">GitHub</a>.' %}
 
 
 
@@ -51,21 +51,21 @@ Check out our <a href="/trophies/">trophy page</a>.' %} -->
 
 <div id="search_results_area" style="display: none;">
 	<h2 id="search_results_heading" style="display:none">Search results: <span id="result_count"></span></h2>
-	<ul id="search_results" class="posts"></ul>
+	<div id="search_results" class="posts"></div>
 </div>
 
 <div id="systems_sections">
 
-<ul class="posts">
+<div class="posts">
 {% for item in ordered_systems %}
 	{% include system_list_item.html item=item %}
 {% endfor %}
-</ul>
+</div>
 </div>
 
 <script type="text/javascript" charset="utf-8">
 	var posts = [
-		{% for item in systems %}
+		{% for item in ordered_systems %}
 			{% assign summary = item.summary | default: item.excerpt | default: item.content %}
 			{% assign system_state = item.state | default: item.section | default: item.system_type | downcase %}
 			{% assign state_label = system_state | capitalize %}
@@ -87,6 +87,7 @@ Check out our <a href="/trophies/">trophy page</a>.' %} -->
 				summary: {{ summary | strip_html | normalize_whitespace | jsonify }},
 				content: {{ item.content | strip_html | normalize_whitespace | jsonify }},
 				url: {{ item.url | strip_html | jsonify }},
+				order: {{ forloop.index0 }},
 				stateLabel: {{ state_label | jsonify }},
 				stateClass: {{ system_state | jsonify }}
 			}{% unless forloop.last %},{% endunless %}
@@ -118,7 +119,7 @@ Check out our <a href="/trophies/">trophy page</a>.' %} -->
 			searchCount.text('(' + results.length + ')');
 			searchResults.html(results.map(function(post) {
 				var badge = post.stateLabel ? ' <span class="system-badge system-badge--' + post.stateClass + '">' + post.stateLabel + '</span>' : '';
-				return '<li><a href="' + post.url + '">' + post.title + '</a>' + badge + '<p>' + post.summary + '</p></li>';
+				return '<div><a href="' + post.url + '">' + post.title + '</a>' + badge + '<p>' + post.summary + '</p></div>';
 			}).join(''));
 		};
 
@@ -143,7 +144,9 @@ Check out our <a href="/trophies/">trophy page</a>.' %} -->
 				return;
 			}
 
-			var results = jsonSearch.getResults(query, posts);
+			var results = jsonSearch.getResults(query, posts).sort(function(a, b) {
+				return a.order - b.order;
+			});
 			searchClear.show();
 			searchResultsHeading.show();
 			searchResultsArea.show();

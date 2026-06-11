@@ -29,7 +29,9 @@ $(document).ready(function () {
       search_clear.hide();
       search_results_heading.hide();
     } else {
-      results = json_search.getResults(query, posts);
+      results = json_search.getResults(query, posts).sort(function (a, b) {
+        return a.order - b.order;
+      });
       search_clear.show();
       search_results_heading.show();
     }

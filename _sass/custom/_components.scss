@@ -78,18 +78,18 @@
 }
 
 .system-badge--flagship {
-  background: rgba(var(--green-color-rgb), 0.1);
-  color: var(--green-color);
-}
-
-.system-badge--major {
   background: rgba(var(--blue-color-rgb), 0.1);
   color: var(--blue-color);
 }
 
-.system-badge--experimental {
-  background: rgba(var(--navy-color-rgb), 0.14);
+.system-badge--major {
+  background: rgba(var(--navy-color-rgb), 0.1);
   color: var(--navy-color);
+}
+
+.system-badge--experimental {
+  background: rgba(var(--green-color-rgb), 0.14);
+  color: var(--green-color);
 }
 
 .system-badge--deprecated {

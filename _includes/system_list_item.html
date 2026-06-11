@@ -16,8 +16,8 @@ downcase %}
 {% assign system_state = 'deprecated' %}
 {% assign state_label = 'Deprecated' %}
 {% endif %}
-<li>
+<div>
     <a href="{{ include.item.url }}">{{ include.item.title }}</a>
     {% if system_state %}<span class="system-badge system-badge--{{ system_state }}">{{ state_label }}</span>{% endif %}
     <p>{{ summary | capitalize }}</p>
-</li>
+</div>
