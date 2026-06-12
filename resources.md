@@ -67,11 +67,11 @@ Available at: [Springer](https://link.springer.com/book/10.1007/978-3-030-24658-
 
 ## Other prominent ASP systems
 
-- [DVLP](https://dlv.demacs.unical.it/) a deductive database system, based on disjunctive logic programming, which offers front-ends to several advanced KR formalisms. It is developed by the University of Calabria and the Vienna University of Technology, Italy and Austria.
+- [DVL](https://dlv.demacs.unical.it/) an ASP system, based on disjunctive logic programming, which offers front-ends to several advanced KR formalisms. It is developed by the University of Calabria and the Vienna University of Technology, Italy and Austria.
 
-- [Wasp](http://alviano.github.io/wasp/) an ASP solver handling disjunctive logic programs under the stable model semantics. It combines techniques originally introduced for SAT solving with methods specifically designed for ASP computation. It is developed by the University of Calabria, Italy.
+- [Wasp](http://alviano.github.io/wasp/) is an ASP solver handling disjunctive logic programs under the stable model semantics. It is developed by the University of Calabria, Italy.
 
 
 ## Applications
 
-In [ASP applications](/doc/apps/) you can find a collection of projects involving our tools, we found interesting.
+In [ASP academic applications](/doc/apps/) you can find a collection of projects involving our tools, we found interesting.
