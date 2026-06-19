@@ -7,11 +7,13 @@
 }
 
 :root {
-  --blue-color: #025BFF;
+  --text-color: #111111;
+  --text-color-rgb: 17, 17, 17;
+  --blue-color: #025bff;
   --blue-color-rgb: 2, 91, 255;
-  --navy-color: #030C3E;
+  --navy-color: #030c3e;
   --navy-color-rgb: 3, 12, 62;
-  --green-color: #9DA322;
+  --green-color: #9da322;
   --green-color-rgb: 157, 163, 34;
 }
 
@@ -25,3 +27,4 @@ table.trophy td {
   padding-bottom: 1ex;
   vertical-align: top;
 }
+
