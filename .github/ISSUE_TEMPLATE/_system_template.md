@@ -1,46 +1,43 @@
 ---
 name: New System Entry
 about: Submit a new system to be added to the Potassco collection
-title: "[New System] <name>"
+title: "[New System] NAME"
 labels: new-system
 ---
 
+# Instructions
+
+- Replace all upper case  fields with actual content.
+  - NAME should be a one word name for the system, ideally lowercase and without spaces. You can use dashes if needed.
+  - SUMMARY should be a one sentence description of the system. It should be concise and informative, giving readers a quick overview of what the system does.
+  - STATE: use "stable" (for maintained and documented), "experimental" (for work in progress), or "deprecated".
+  - DESCRIPTION: provide a more detailed description of the system, its features, use cases, and any other relevant information. You can also include examples and screenshots to illustrate the system's capabilities.
+- Adjust URLs below if necessary, especially if the system doesn't have documentation or a GitHub repository.
+- Add publication links if available.
+  1. Fill in fields AUTHORS, TITLE, CONFERENCE and YEAR.
+  2. Find the publication at https://www.cs.uni-potsdam.de/wv/publications/.
+  3. Copy the last part of its URL, e.g. corr/abs-2502-09222 and use it to replace the URL SUFFIX below.
+
+```
 ---
 layout: system
-title: <name>
-summary: <one-line summary>
-state: experimental
-permalink: /labs/<name>/
+title: NAME
+summary: SUMMARY
+state: STATE
+permalink: /NAME/
 ---
 
-<!--
-INSTRUCTIONS
-- Replace all <...> fields below with the actual content.
-- state: use "stable" (maintained, documented), "experimental" (WIP), or "deprecated".
-  If stable, change the permalink from /labs/<name>/ to /<name>/
-- Remove this comment and any other comments before submitting.
--->
-
-<Description: what the system does, its features, use cases. You can add examples and screenshots. We recommend keeping it concise and linking to the documentation for more details.>
+DESCRIPTION
 
 ## Documentation
 
-<!-- Default URL assumes the Potassco project template. Change if docs are elsewhere. -->
-
-- [Documentation webpage](https://potassco.org/<name>/docs)
+- [Documentation webpage](https://potassco.org/NAME/docs)
 
 ## Resources
 
-- Source code on [GitHub](https://github.com/potassco/<name>)
-
-<!-- Add benchmarks, tutorials, demos, etc. here. Remove this section if none. -->
+- Source code on [GitHub](https://github.com/potassco/NAME)
 
 ## Publications
 
-<!--
-To fill in publication links:
-1. Find the publication at https://www.cs.uni-potsdam.de/wv/publications/
-2. Copy the last part of its URL, e.g. corr/abs-2502-09222
-3. Use it to replace <url-suffix> below. Remove this section if no publications.
--->
-- <Authors>[<Title>]({{ site.publicationurl }}/#DBLP:journals/<url-suffix>), <Conference>, <Year>
+- AUTHORS[TITLE]({{ site.publicationurl }}/#DBLP:journals/SUFFIX), CONFERENCE, YEAR
+```
