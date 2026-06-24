@@ -23,4 +23,4 @@ the creation of high-quality documentation with the following features:
 
 ## Documentation
 
-- [Documentation webpage](https://potassco.org/clindocs/docs) for latest version.
+- [Documentation webpage](https://docs.potassco.org/clindocs/) for latest version.
