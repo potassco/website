@@ -23,7 +23,7 @@ The goal is to simplify the process of defining and running custom extensions by
 
 ## Documentation
 
-- [Documentation webpage](https://potassco.org/metasp/docs) for latest version.
+- [Documentation webpage](https://docs.potassco.org/metasp/) for latest version.
 
 ## Resources
 
