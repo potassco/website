@@ -27,7 +27,7 @@ approach that complies with its fact-based I/O interface.
 
 ## Documentation
 
-A detailed documentation of asprilo's problem domain and key components can be found at <https://asprilo.github.io/>
+A detailed documentation of asprilo's problem domain and key components can be found at <https://docs.potassco.org/asprilo>.
 
 ## Development
 
