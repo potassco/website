@@ -1118,7 +1118,7 @@ const Clingo = (() => {
 
       if (this.py) {
         this.ispy = true;
-        this.worker = new Worker("/assets/js/pyworker.js");
+        this.worker = new Worker("/assets/js/pyworker.js", { type: "module" });
       } else {
         this.ispy = false;
         this.worker = new Worker("/assets/js/worker.js");
