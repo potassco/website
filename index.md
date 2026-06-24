@@ -37,14 +37,14 @@ permalink: /
    tone="navy"
    image="/assets/images/uni-potsdam.png"
    alt="University of Potsdam logo"
-   link="<https://www.uni-potsdam.de/>"
+   link="https://www.uni-potsdam.de"
    text='The <a href="https://www.cs.uni-potsdam.de/wv/">Knowledge Representation and Reasoning group</a> at the University of Potsdam specializes in Answer Set Programming (ASP).' %}
 
 {% include callout.html
    tone="blue"
    image="/assets/images/psg_rgb_2colors_digital.png"
    alt="Potassco Solutions logo"
-   link="<https://potassco.com>"
+   link="https://potassco.com"
    text='Our spin-off, <a href="https://potassco.com">Potassco Solutions</a>, provides custom integration and professional support for industrial applications.' %}
 
 {% include callout.html
