@@ -7,11 +7,11 @@ hide_title: true
 permalink: /systems/
 ---
 
-{% assign systems = site.systems | sort: "title" %}
+{% assign systems = site.systems | sort_natural: "title" %}
 
 {% assign pinned_items_alpha = systems
   | where_exp: "item", "item.pinned == 1 and item.order == nil"
-  | sort: "title" %}
+  | sort_natural: "title" %}
 {% assign pinned_items_ordered = systems
   | where_exp: "item", "item.pinned == 1 and item.order != nil"
   | sort: "order" %}
@@ -19,7 +19,7 @@ permalink: /systems/
 
 {% assign stable_items_alpha = systems
 | where_exp: "item", 'item.state == "stable" and item.pinned != 1 and item.order == nil'
-| sort: "title" %}
+| sort_natural: "title" %}
 {% assign stable_items_ordered = systems
 | where_exp: "item", 'item.state == "stable" and item.pinned != 1 and item.order != nil'
 | sort: "order" %}
@@ -27,7 +27,7 @@ permalink: /systems/
 
 {% assign experimental_items_alpha = systems
 | where_exp: "item", 'item.state == "experimental" and item.pinned != 1 and item.order == nil'
-| sort: "title" %}
+| sort_natural: "title" %}
 {% assign experimental_items_ordered = systems
 | where_exp: "item", 'item.state == "experimental" and item.pinned != 1 and item.order != nil'
 | sort: "order" %}
@@ -35,7 +35,7 @@ permalink: /systems/
 
 {% assign deprecated_items_alpha = systems
 | where_exp: "item", 'item.state == "deprecated" and item.pinned != 1 and item.order == nil'
-| sort: "title" %}
+| sort_natural: "title" %}
 {% assign deprecated_items_ordered = systems
 | where_exp: "item", 'item.state == "deprecated" and item.pinned != 1 and item.order != nil'
 | sort: "order" %}
