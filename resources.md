@@ -30,9 +30,7 @@ Roland Kaminski,
 Benjamin Kaufmann,
 and
 Torsten Schaub <br><a href="https://www.cs.uni-potsdam.de/wv/publications/#DBLP:series/synthesis/2012Gebser">Answer Set Solving in Practice</a>.
-2012,
-Published by
-<a href="http://www.morganclaypool.com">Morgan and Claypool</a>' %}
+2012' %}
 
 <i>"This book presents a practical introduction to ASP, aiming at using ASP languages and systems for solving application problems.
 Starting from the essential formal foundations,

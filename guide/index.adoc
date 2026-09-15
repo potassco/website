@@ -90,7 +90,7 @@ hope you find it both enjoyable and helpful!
   'Abstract Gringo'. Theory and Practice of Logic Programming. 2015.
   link:http://arxiv.org/abs/1507.06576[arxiv.org].
 - [[[Foundations]]] M. Gebser & R. Kaminski & B. Kaufmann and T. Schaub.
-  'Answer Set Solving in Practice'. Morgan and Claypool Publishers. 2012.
+  'Answer Set Solving in Practice'. Springer Cham. 2012.
 - [[[Background]]] C. Baral. Knowledge Representation, Reasoning and
   Declarative Problem Solving. Cambridge University Press. 2003.
 - [[[SATHandbook]]] A. Biere & M. Heule & H. van Maaren & T. Walsh. 'Handbook
