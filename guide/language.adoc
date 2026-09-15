@@ -479,7 +479,7 @@ general form is:
 term relation function { element; ... } relation term
 ----
 
-* `function` is one of: `#count`, `#min`, `#max`, `#sum`, `#sum+`
+* `function` is one of: `#count`, `#min`, `#max`, `#sum`, `#sum+`, `#sort`
 * `relation` is a comparison operator: `=`, `!=`, `<`, `pass:[<=]`, `>`, `>=`
 * `relation` can be omitted in which case it defaults to `>=`
 * Left/right guards composed of term and relation are optional
@@ -507,6 +507,13 @@ Aggregate functions:
 * `#min`/`#max`: the smallest/largest value among the first terms of the tuples
 * `#sum`: the sum of the first term of each tuple (if integer)
 * `#sum+`: like sum but ignores negative integers
+* `#sort`: evaluates to the set of all pairs of the first terms of the tuples,
+  such that the the two terms immediately follow each other in the sorted order
+
+[WARNING]
+====
+The `#sort` aggregate can only be used with a left guard and relation `=`.
+====
 
 A special case is the _set body aggregate_, which uses a literal instead of a
 tuple and counts the number of true literals:
@@ -610,12 +617,30 @@ and `2,b`, `3,b`, `4,b`, `5,b` from `q(X)`, as well as the single terms `1`,
 `2`, `3`, `4`, `5` provided by both predicates.
 ====
 
+.Sort Aggregates
+====
+Some more advanced encoding schemes require a sorted set of terms. The `#sort`
+aggregate can be used to obtain such a set:
+
+[.clingo-code]
+[source]
+----
+%%% OPTIONS: 0
+{ p(1..3) }.
+
+s(X,Y) :- (X,Y) = #sort { #inf; Z : p(Z); #sup }.
+----
+
+Note how the example introduces the `#inf` and `#sup` constants to easily refer
+to the first and last element.
+====
+
 [NOTE]
 ====
 * Recursive aggregates are also subject to minimization of cyclic derivations;
   we do not detail this here because this is a rather advanced topic.
 * Assignments aggregates are best applied to predicates defined by facts or
-  definite rules to avoid computational overhead (as in the above example).
+  definite rules to avoid computational overhead.
 * Care has to be taken to correctly use tuples and not just weights in term
   tuples as the set of them is formed that eliminates duplicates.
 ====
