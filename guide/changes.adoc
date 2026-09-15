@@ -1,0 +1,130 @@
+---
+title: Changes
+nav_title: Changes
+layout: asciidoc
+permalink: /guide/changes/
+nav_order: 5
+---
+include::_includes/macros.adoc[]
+
+= Changes
+
+== Clingo 5 to 6
+
+The ASP syntax is mostly unchanged, but a few arithmetic and safety changes,
+plus a subtle semantic change, affect results. This note lists what to check
+and new features worth knowing.
+
+The API changed more substantially. We do not discuss that here.
+
+== Changes that need attention
+
+=== Arithmetic operators
+
+[cols="1,1,1,3",options="header"]
+|===
+| Expression | clingo 5 | clingo 6 | What changed
+
+| `pass:[-a**b]`, `pass:[~a**b]`
+| `pass:[-2**2]` = `4`
+| `pass:[-2**2]` = `-4`
+| `pass:[**]` now binds _tighter_ than unary `-` and `~` (the standard math
+  reading `pass:[-(a\**b)]`). Write `pass:[(-a)\**b]` to keep the old grouping.
+
+| `-5/3`, `-5\3`
+| `-1`, `-2` (truncate toward zero)
+| `-2`, `1` (floor toward `-∞`)
+| Integer division `/` and modulo `\` now use floor semantics.
+  Results differ only when exactly one operand is negative.
+
+| `100000*100000`
+| `1410065408` (32-bit wraparound)
+| `10000000000` (exact)
+| Integer arithmetic is now arbitrary-precision. Any encoding that relied on
+  32-bit wraparound will differ.
+|===
+
+=== Safety of anonymous variables under negation
+
+[cols="1,1",options="header"]
+|===
+| clingo 5 | clingo 6
+
+| `:- p(V,S), not visit_time(V,S,_).`
+|  `:- p(V,S), not visit_time(V,S,*).`
+|===
+
+clingo 6 replaces every anonymous variable `\_` with a fresh variable and then
+applies the ordinary safety rule: a variable must occur in a positive body
+literal that can bind it. A variable appearing only inside a `not ...` literal
+has no such occurrence, so it is unsafe.
+
+clingo 5 applies a special semantics to anonymous variables in negative
+literals. It internally introduces a projection rule. For example, the literal
+`not p(X,_)` is replaced by `p_exists(X)` accompanied by rule `p_exists(X) :-
+p(X,Y)`.
+
+The clingo 5 behaviour can be restored by passing option `--project-anonymous`
+to clingo 6. If backward compatibility is not required, the projection can be
+made explicit using `not p(X,*)`.
+
+=== Conditional literals
+
+The semantics of conditional literals in clingo 6 changed slightly.
+
+This change affects how global variables are computed in conditional literals.
+Since this is a semantic corner case, it is unlikely to affect existing
+encodings.
+
+[.clingo-code]
+[source]
+----
+q(1..2).
+{p(1,1); p(1,2); p(2,1)}
+h :- p(X,Y): q(Y).
+
+% clingo 5: h :- p(1,1): p(1);
+%                p(1,2): q(2).
+%           h :- p(2,1): q(1).
+% clingo 6: unsafe
+----
+
+In the example above variable `X` is no longer considered global, which does
+not allow for deriving `h` in clingo 6. In fact, the encoding is unsafe.
+
+== New in clingo 6
+
+These are additions.
+They do not affect existing encodings, but 5.8.2 users may want to adopt them.
+
+[cols="2,3,5",options="header"]
+|===
+| Feature | Example | What it does
+
+| *Format Strings*
+| `label(f"row {R+1} col {C+1}") :- cell(R,C).`
+| Evaluation of expressions with strings. 
+  See xref:/guide/language.adoc#format-strings[Format Strings]
+
+| *`#parts` Directives*
+| `#parts base, check.`
+| Select which `#program` parts to ground from within the source,
+  not only via the `--parts` command-line option.
+  See xref:/guide/language.adoc#program-and-parts-directives[Program Parts].
+
+| *Digit separators*
+| `p(1'000).`
+| A `'` groups digits in a decimal integer (in groups of three);
+  `1'000` is `1000`.
+  See xref:/guide/language.adoc#integers[Integers].
+
+| *String escapes*
+| `p("tab\there").`
+| Basic clingo 5 escapes: `\"`, `\\`, `\n`.
+  Additional clingo 6 escapes: `\t`, `\r`, and `\u{HEX}` (Unicode).
+  See xref:/guide/language.adoc#strings[Strings].
+
+| *Projection `pass:[*]`*
+| `h :- p(X,pass:[*]), not q(X,pass:[*]).`
+| An explicit projection placeholder that can be used in all body literals.
+|===

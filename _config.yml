@@ -55,6 +55,7 @@ asciidoctor:
     rouge-css: style
     content-class: asciidoc-content
     icons: font
+    relfilesuffix: /
 
 plugins:
   - jekyll-asciidoc
