@@ -3,6 +3,7 @@ layout: system
 title: clingo-lpx
 summary: A solver extending clingo with linear constraint solving capabilities.
 state: stable
+github_repo: clingo-lpx
 permalink: /clingo-lpx/
 ---
 

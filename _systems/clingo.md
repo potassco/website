@@ -4,6 +4,7 @@ title: clingo
 summary: The core system of the Potassco suite, providing a powerful system for ASP solving.
 state: stable
 pinned: 1
+github_reop: clingo
 permalink: "/clingo/"
 order: 1
 ---

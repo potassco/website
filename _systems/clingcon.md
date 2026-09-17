@@ -3,6 +3,7 @@ layout: system
 title: clingcon
 summary: An answer set solver for constraint logic programs.
 state: stable
+github_repo: clingcon
 permalink: "/clingcon/"
 ---
 

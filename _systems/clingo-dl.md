@@ -4,7 +4,8 @@ title: clingo-dl
 summary: A solver extending clingo with difference constraint solving capabilities.
 state: stable
 date: "2017-06-19"
-permalink: "/clingoDL/"
+permalink: "/clingo-dl/"
+github_repo: clingo-dl
 pinned: 1
 order: 2
 ---

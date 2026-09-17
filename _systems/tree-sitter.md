@@ -3,6 +3,7 @@ layout: system
 title: tree-sitter
 summary: A collection of tree-sitter grammars for the Clingo language.
 state: stable
+github_repo: tree-sitter-clingo
 permalink: "/tree-sitter/"
 ---
 

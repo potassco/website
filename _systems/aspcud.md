@@ -3,6 +3,7 @@ layout: system
 title: aspcud
 summary: A solver for package dependencies.
 state: stable
+github_repo: aspcud
 permalink: "/aspcud/"
 ---
 
