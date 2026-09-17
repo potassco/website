@@ -50,19 +50,18 @@ The API changed more substantially. We do not discuss that here.
 |===
 | clingo 5 | clingo 6
 
-| `:- p(V,S), not visit_time(V,S,_).`
-|  `:- p(V,S), not visit_time(V,S,*).`
+| `:- p(V,S), not q(V,S,_).`
+| `:- p(V,S), not q(V,S,*).`
 |===
 
-clingo 6 replaces every anonymous variable `\_` with a fresh variable and then
+clingo 6 treats every anonymous variable `\_` like a fresh variable and then
 applies the ordinary safety rule: a variable must occur in a positive body
 literal that can bind it. A variable appearing only inside a `not ...` literal
 has no such occurrence, so it is unsafe.
 
-clingo 5 applies a special semantics to anonymous variables in negative
-literals. It internally introduces a projection rule. For example, the literal
-`not p(X,_)` is replaced by `p_exists(X)` accompanied by rule `p_exists(X) :-
-p(X,Y)`.
+clingo 5 applies a special rule to anonymous variables in negative literals. It
+treats them like fresh nested existentially quantified variables applied to the
+atoms of literals.
 
 The clingo 5 behaviour can be restored by passing option `--project-anonymous`
 to clingo 6. If backward compatibility is not required, the projection can be
@@ -72,25 +71,25 @@ made explicit using `not p(X,*)`.
 
 The semantics of conditional literals in clingo 6 changed slightly.
 
-This change affects how global variables are computed in conditional literals.
-Since this is a semantic corner case, it is unlikely to affect existing
-encodings.
+This change affects how global variables are computed in conditional literals
+and how pools are expanded. Since this is about semantic corner cases, it is
+unlikely to affect existing encodings. We illustrate the change with a simple
+example:
 
 [.clingo-code]
 [source]
 ----
-q(1..2).
-{p(1,1); p(1,2); p(2,1)}
-h :- p(X,Y): q(Y).
-
-% clingo 5: h :- p(1,1): p(1);
-%                p(1,2): q(2).
-%           h :- p(2,1): q(1).
-% clingo 6: unsafe
+%%% OPTIONS: 0
+{p(1..3)}.
+h :- p(1..3): #true.
 ----
 
-In the example above variable `X` is no longer considered global, which does
-not allow for deriving `h` in clingo 6. In fact, the encoding is unsafe.
+Here, clingo 5 derives `h` if at least one of `p(1)`, `p(2)`, or `p(3)` is
+true, while clingo 6 derives `h` only if all of them are true.
+
+Furthermore, clingo 6 now treats variables that occur *purely* in conclusions
+of conditional literals as non-global variables. Thus, it rejects such programs
+as unsafe, while clingo 5 accepted them treating such variables as global.
 
 == New in clingo 6
 
