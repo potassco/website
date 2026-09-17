@@ -16,7 +16,7 @@ ASP.
 
 ## Documentation
 
-- [Documentation webpage](https://github.com/potassco/flingo/blob/master/README.md)
+- [Documentation webpage](https://docs.potassco.org/flingo/)
 
 ## Resources
 
