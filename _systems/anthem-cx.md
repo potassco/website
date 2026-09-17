@@ -3,6 +3,7 @@ layout: system
 title: anthem-cx
 summary: A tool to automatically find counterexamples to external equivalence problems.
 state: stable
+github_repo: anthem-cx
 permalink: /anthem-cx/
 ---
 

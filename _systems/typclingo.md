@@ -3,6 +3,7 @@ layout: system
 title: typclingo
 summary: A type checker for Clingo ASP programs.
 state: experimental
+github_repo: typclingo
 permalink: /typclingo/
 ---
 

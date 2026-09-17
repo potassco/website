@@ -3,6 +3,7 @@ layout: system
 title: plingo
 summary: A system for probabilistic reasoning in clingo.
 state: stable
+github_repo: plingo
 permalink: /plingo/
 ---
 

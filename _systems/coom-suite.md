@@ -3,6 +3,7 @@ layout: system
 title: coom-suite
 summary: Python package to parse and solve product configuration problems specified in COOM using ASP.
 state: stable
+github_repo: coom-suite
 permalink: /coom-suite/
 ---
 
@@ -10,7 +11,7 @@ The [COOM language](https://www.coom-lang.org/) is a domain-specific language fo
 While currently geared towards ASP, the COOM Suite is intended to serve as a general workbench for experimentation with industrial-scale product configuration problems.
 It includes a (customizable) [ANTLR v4](https://www.antlr.org/) parser to convert COOM specifications into facts, and currently contains two ASP encodings for solving: one for [clingo](https://potassco.org/clingo) and one for hybrid solver [flingo](https://potassco.org/flingo/).
 
-In addition, a simple UI, a range of examples, and a [benchmark collection](https://github.com/potassco/coom-benchmarks) with various scalable benchmark sets is provided.
+In addition, a simple UI, a range of examples, and a [benchmark collection](https://github.com/potassco/coom-benchmarks) with various scalable benchmark sets are provided.
 
 ## Documentation
 
