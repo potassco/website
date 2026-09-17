@@ -54,8 +54,8 @@ The API changed more substantially. We do not discuss that here.
 | `:- p(V,S), not q(V,S,*).`
 |===
 
-clingo 6 treats every anonymous variable `\_` like a fresh variable and then
-applies the ordinary safety rule: a variable must occur in a positive body
+clingo 6 treats every anonymous variable `pass:[_]` like a fresh variable and
+then applies the ordinary safety rule: a variable must occur in a positive body
 literal that can bind it. A variable appearing only inside a `not ...` literal
 has no such occurrence, so it is unsafe.
 
