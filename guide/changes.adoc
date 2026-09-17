@@ -29,7 +29,7 @@ The API changed more substantially. We do not discuss that here.
 | `pass:[-2**2]` = `4`
 | `pass:[-2**2]` = `-4`
 | `pass:[**]` now binds _tighter_ than unary `-` and `~` (the standard math
-  reading `pass:[-(a\**b)]`). Write `pass:[(-a)\**b]` to keep the old grouping.
+  reading `pass:[-(a**b)]`). Write `pass:[(-a)**b]` to keep the old grouping.
 
 | `-5/3`, `-5\3`
 | `-1`, `-2` (truncate toward zero)
