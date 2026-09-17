@@ -1,7 +1,7 @@
 ---
 layout: system
 title: typclingo
-summary: A type checker for Clingo ASP programs
+summary: A type checker for Clingo ASP programs.
 state: experimental
 permalink: /typclingo/
 ---
@@ -13,5 +13,3 @@ Type annotations are written in comments, so the ASP program itself is never mod
 ## Resources
 
 - Source code on [GitHub](https://github.com/potassco/typclingo/)
-
-## Publications

@@ -1,7 +1,7 @@
 ---
 layout: system
 title: plingo
-summary: A system for probabilistic reasoning in clingo
+summary: A system for probabilistic reasoning in clingo.
 state: stable
 permalink: /plingo/
 ---
@@ -16,4 +16,4 @@ While the basic syntax of plingo is the same as the one of clingo, its semantics
 
 ## Publications
 
-- Hahn, S., Janhunen, T., Kaminski, R., Romero, J., Rühling, N., & Schaub, T. [Plingo: A System for Probabilistic Reasoning in Answer Set Programming]({{ site.publicationurl }}/#DBLP:journals/corr/abs-2206-11515.pdf), TPLP, 2025
+- Hahn, S., Janhunen, T., Kaminski, R., Romero, J., Rühling, N., & Schaub, T. [Plingo: A System for Probabilistic Reasoning in Answer Set Programming]({{ site.publicationurl }}/#DBLP:journals/corr/abs-2206-11515), TPLP, 2025

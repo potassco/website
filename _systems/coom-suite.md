@@ -1,7 +1,7 @@
 ---
 layout: system
 title: coom-suite
-summary: Python package to parse and solve product configuration problems specified in COOM using ASP
+summary: Python package to parse and solve product configuration problems specified in COOM using ASP.
 state: stable
 permalink: /coom-suite/
 ---
@@ -22,4 +22,4 @@ In addition, a simple UI, a range of examples, and a [benchmark collection](http
 
 ## Publications
 
-- Baumeister, J., Hahn, S., Herud, K., Ostrowski, M., Reutelshöfer, J., Rühling, N., Schaub, T., & Wanko, P. [Towards Industrial-scale Product Configuration]({{ site.publicationurl }}/#DBLP:journals/corr/abs-2504-00013.pdf), TPLP, 2026
+- Baumeister, J., Hahn, S., Herud, K., Ostrowski, M., Reutelshöfer, J., Rühling, N., Schaub, T., & Wanko, P. [Towards Industrial-scale Product Configuration]({{ site.publicationurl }}/#DBLP:journals/corr/abs-2504-00013), TPLP, 2026
