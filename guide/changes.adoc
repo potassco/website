@@ -89,7 +89,7 @@ true, while clingo 6 derives `h` only if all of them are true.
 
 Furthermore, clingo 6 now treats variables that occur *purely* in conclusions
 of conditional literals as non-global variables. Thus, it rejects such programs
-as unsafe, while clingo 5 accepted them treating such variables as global.
+as unsafe, while clingo 5 treats such variables as global.
 
 == New in clingo 6
 
