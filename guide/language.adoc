@@ -98,6 +98,9 @@ are supported:
 * `\\` for backslash
 * `\n` for newline
 * `\"` for double quote
+* `\r` for carriage return
+* `\t` for tab
+* `\u{HEX}` for Unicode characters (where HEX is a hexadecimal code point)
 
 [.clingo-code]
 [source]
@@ -105,6 +108,7 @@ are supported:
 p("hello, world!").
 p("line1\nline2").
 p("She said: \"Hello!\"").
+p("An Emoji: \u{1F600}").
 ----
 
 ==== Variables
