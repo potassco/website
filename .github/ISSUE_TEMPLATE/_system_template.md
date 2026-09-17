@@ -1,6 +1,6 @@
 ---
 name: New System Entry
-about: Submit a new system to be added to the Potassco collection
+about: Submit a new system to be added to the Potassco collection.
 title: "[New System] NAME"
 labels: new-system
 ---
@@ -9,9 +9,10 @@ labels: new-system
 
 - Replace all upper case fields with actual content.
   - NAME should be a one word name for the system, ideally lowercase and without spaces. You can use dashes if needed.
-  - SUMMARY should be a one sentence description of the system. It should be concise and informative, giving readers a quick overview of what the system does.
+  - SUMMARY should be a one sentence description of the system (including a `.` at the end). It should be concise and informative, giving readers a quick overview of what the system does.
   - STATE: use "stable" (for maintained and documented), "experimental" (for work in progress), or "deprecated".
   - DESCRIPTION: provide a detailed description of the system, its features, use cases, and any other relevant information. You can also include examples and screenshots to illustrate the system's capabilities.
+  - REPO: the name of github repository within the potassco organization.
 - Adjust URLs below if necessary, especially if the system doesn't have documentation or a GitHub repository.
 - Add publication links if available.
   1. Fill in fields AUTHORS, TITLE, CONFERENCE and YEAR.
@@ -24,6 +25,7 @@ layout: system
 title: NAME
 summary: SUMMARY
 state: STATE
+github_repo: REPO
 permalink: /NAME/
 ---
 
