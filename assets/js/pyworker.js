@@ -89,6 +89,7 @@ async function run(files, args) {
       } else {
         args.push(file.name);
       }
+      args.push_back("--out-color=yes");
     });
     pyodide.globals.get("run_clingo_main")(
       pyodide.toPy(args),

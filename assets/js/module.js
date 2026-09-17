@@ -10,6 +10,69 @@ const Clingo = (() => {
    * - loadZipLib: Dynamically loads the JSZip library if not already loaded.
    */
   const Utils = (() => {
+    const escapeHtml = (value) => {
+      return String(value).replace(/[&<>"']/g, function (character) {
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        }[character];
+      });
+    };
+    const ansiToHtml = (text) => {
+      var colors = {
+        30: "#24292f",
+        31: "#b42318",
+        32: "#067d17",
+        33: "#8a5700",
+        34: "#0969da",
+        35: "#8250df",
+        36: "#0b7285",
+        37: "#57606a",
+
+        90: "#6e7781",
+        91: "#cf222e",
+        92: "#1a7f37",
+        93: "#9a6700",
+        94: "#0550ae",
+        95: "#8250df",
+        96: "#0b7285",
+        97: "#24292f",
+      };
+
+      var result = "";
+      var color = null;
+
+      text.split(/(\x1b\[[0-9;]*m)/).forEach(function (part) {
+        var match = part.match(/^\x1b\[([0-9;]*)m$/);
+
+        if (match) {
+          match[1].split(";").forEach(function (code) {
+            code = Number(code);
+
+            if (code === 0) {
+              color = null;
+            } else if (colors[code]) {
+              color = colors[code];
+            }
+          });
+        } else {
+          var escaped = part
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+
+          result += color
+            ? '<span style="color:' + color + '">' + escaped + "</span>"
+            : escaped;
+        }
+      });
+
+      return result;
+    };
+
     /**
      * Splits the input string into tab objects based on tab markers.
      *
@@ -62,7 +125,6 @@ const Clingo = (() => {
       });
       return tabs;
     };
-
     /**
      * Splits a filename into name and extension.
      *
@@ -116,7 +178,14 @@ const Clingo = (() => {
 
     const stripAnsiCodes = (input) => input.replace(/\x1b\[[0-9;]*m/g, "");
 
-    return { splitInput, sanitize, loadZipLib, stripAnsiCodes };
+    return {
+      splitInput,
+      sanitize,
+      loadZipLib,
+      stripAnsiCodes,
+      ansiToHtml,
+      escapeHtml,
+    };
   })();
 
   /**
@@ -941,7 +1010,7 @@ const Clingo = (() => {
      * @param {string} text - Text to append.
      */
     updateOutput(text) {
-      this.outputElement.textContent += `${text}\n`;
+      this.outputElement.innerHTML += `${text}\n`;
     }
 
     /**
@@ -1139,13 +1208,15 @@ const Clingo = (() => {
             break;
           case "stdout":
             this.dispatchEvent(
-              new CustomEvent("output-append", { detail: msg.value }),
+              new CustomEvent("output-append", {
+                detail: Utils.ansiToHtml(msg.value),
+              }),
             );
             break;
           case "stderr":
             this.dispatchEvent(
               new CustomEvent("output-append", {
-                detail: Utils.stripAnsiCodes(msg.value),
+                detail: Utils.ansiToHtml(msg.value),
               }),
             );
             break;
