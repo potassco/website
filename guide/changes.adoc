@@ -127,4 +127,5 @@ They do not affect existing encodings, but 5.8.2 users may want to adopt them.
 | *Projection `pass:[*]`*
 | `h :- p(X,pass:[*]), not q(X,pass:[*]).`
 | An explicit projection placeholder that can be used in all body literals.
+  See xref:/guide/language.adoc#projection-in-symbolic-literals[Projection].
 |===

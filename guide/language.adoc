@@ -397,6 +397,33 @@ p(a-1).
 ** Pools are sometimes used in intervals to specify ranges of values.
 ====
 
+=== Projection in Symbolic Literals
+
+A `pass:[*]` can be used to project away the value of a variable in a symbolic
+literal. This not just treats the `pass:[*]` like an anonymous variable but can
+also be used in negative literals. Semantically, this behaves like introducing
+a fresh existentially quantified variable for each `pass:[*]` that applies to
+the atom of the literal.
+
+[.clingo-code]
+[source]
+----
+%%% OPTIONS: 0
+a(1).
+b(a;b).
+{ p(X,Y,f(X,Y)): a(X), b(Y) }.
+q(X) :-     p(X,*,f(X,*)).
+r(X) :- not p(X,*,f(X,*)), a(X).
+----
+
+[NOTE]
+====
+* Safety requirements limit where projection can be used:
+** It cannot be used in the scope of external functions or arithmetic
+   expressions.
+** It can only be used in conditions or rule bodies--not in rule heads.
+====
+
 .Symbolic Literals
 ====
 The following example demonstrates symbolic literals including classical and
@@ -508,7 +535,7 @@ Aggregate functions:
 * `#sum`: the sum of the first term of each tuple (if integer)
 * `#sum+`: like sum but ignores negative integers
 * `#sort`: evaluates to the set of all pairs of the first terms of the tuples,
-  such that the the two terms immediately follow each other in the sorted order
+  such that the two terms immediately follow each other in the sorted order
 
 [WARNING]
 ====
