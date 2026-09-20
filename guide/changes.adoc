@@ -127,4 +127,9 @@ They do not affect existing encodings, but 5.8.2 users may want to adopt them.
 | `h :- p(X,pass:[*]), not q(X,pass:[*]).`
 | An explicit projection placeholder that can be used in all body literals.
   See xref:/guide/language.adoc#projection-in-symbolic-literals[Projection].
+
+| *Sort Aggregates*
+| `s(X,Y) :- (X,Y) = #sort { Z: p(Z) }.`
+| Aggregates to sort a set of terms.
+  See xref:/guide/language.adoc#body-aggregates[Body Aggregates].
 |===
