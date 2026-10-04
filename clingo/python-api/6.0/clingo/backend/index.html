@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.67">
     
     
       
@@ -27,10 +27,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.4ae390e2.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.96d1a7e4.min.css">
       
       
 
@@ -44,14 +49,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -72,7 +75,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -95,12 +98,12 @@
     <a href="../.." title="clingo API reference" class="md-header__button md-logo" aria-label="clingo API reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -152,45 +155,20 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -219,7 +197,7 @@
     <a href="../.." title="clingo API reference" class="md-nav__button md-logo" aria-label="clingo API reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     clingo API reference
@@ -289,8 +267,7 @@
   <span class="md-ellipsis">
     
   
-    clingo
-  
+  clingo
 
     
   </span>
@@ -306,21 +283,21 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    clingo
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
               
-            
+  
+  clingo
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+              
+                
+                  
   
   
   
@@ -333,8 +310,7 @@
   <span class="md-ellipsis">
     
   
-    app
-  
+  app
 
     
   </span>
@@ -345,10 +321,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -361,8 +337,7 @@
   <span class="md-ellipsis">
     
   
-    ast
-  
+  ast
 
     
   </span>
@@ -373,10 +348,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -385,7 +360,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
       
@@ -396,8 +371,7 @@
   <span class="md-ellipsis">
     
   
-    backend
-  
+  backend
 
     
   </span>
@@ -407,15 +381,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    backend
-  
+  backend
 
     
   </span>
@@ -426,23 +399,24 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#clingo.backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         backend
-      
+      </span>
     </span>
   </a>
   
@@ -452,9 +426,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend--examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Examples
-      
+      </span>
     </span>
   </a>
   
@@ -468,9 +442,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HeuristicType
-      
+      </span>
     </span>
   </a>
   
@@ -480,9 +454,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Factor" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Factor
-      
+      </span>
     </span>
   </a>
   
@@ -491,9 +465,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.False_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         False_
-      
+      </span>
     </span>
   </a>
   
@@ -502,9 +476,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Init" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Init
-      
+      </span>
     </span>
   </a>
   
@@ -513,9 +487,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Level" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Level
-      
+      </span>
     </span>
   </a>
   
@@ -524,9 +498,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Sign" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Sign
-      
+      </span>
     </span>
   </a>
   
@@ -535,9 +509,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.True_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         True_
-      
+      </span>
     </span>
   </a>
   
@@ -551,9 +525,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ExternalType
-      
+      </span>
     </span>
   </a>
   
@@ -563,9 +537,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.False_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         False_
-      
+      </span>
     </span>
   </a>
   
@@ -574,9 +548,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.Free" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Free
-      
+      </span>
     </span>
   </a>
   
@@ -585,9 +559,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.Release" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Release
-      
+      </span>
     </span>
   </a>
   
@@ -596,9 +570,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.True_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         True_
-      
+      </span>
     </span>
   </a>
   
@@ -612,9 +586,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         TheorySequenceType
-      
+      </span>
     </span>
   </a>
   
@@ -624,9 +598,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.List" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         List
-      
+      </span>
     </span>
   </a>
   
@@ -635,9 +609,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.Set" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Set
-      
+      </span>
     </span>
   </a>
   
@@ -646,9 +620,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.Tuple" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Tuple
-      
+      </span>
     </span>
   </a>
   
@@ -662,9 +636,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.Observer" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Observer
-      
+      </span>
     </span>
   </a>
   
@@ -674,9 +648,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.assume" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         assume
-      
+      </span>
     </span>
   </a>
   
@@ -685,9 +659,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.begin_step" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         begin_step
-      
+      </span>
     </span>
   </a>
   
@@ -696,9 +670,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.edge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         edge
-      
+      </span>
     </span>
   </a>
   
@@ -707,9 +681,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.end_step" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         end_step
-      
+      </span>
     </span>
   </a>
   
@@ -718,9 +692,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.external" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         external
-      
+      </span>
     </span>
   </a>
   
@@ -729,9 +703,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.heuristic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         heuristic
-      
+      </span>
     </span>
   </a>
   
@@ -740,9 +714,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.init_program" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         init_program
-      
+      </span>
     </span>
   </a>
   
@@ -751,9 +725,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.minimize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         minimize
-      
+      </span>
     </span>
   </a>
   
@@ -762,9 +736,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.project" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         project
-      
+      </span>
     </span>
   </a>
   
@@ -773,9 +747,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         rule
-      
+      </span>
     </span>
   </a>
   
@@ -784,9 +758,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.weight_rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         weight_rule
-      
+      </span>
     </span>
   </a>
   
@@ -800,9 +774,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.Backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Backend
-      
+      </span>
     </span>
   </a>
   
@@ -812,9 +786,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.assume" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         assume
-      
+      </span>
     </span>
   </a>
   
@@ -823,9 +797,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.atom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         atom
-      
+      </span>
     </span>
   </a>
   
@@ -834,9 +808,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.edge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         edge
-      
+      </span>
     </span>
   </a>
   
@@ -845,9 +819,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.external" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         external
-      
+      </span>
     </span>
   </a>
   
@@ -856,9 +830,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.heuristic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         heuristic
-      
+      </span>
     </span>
   </a>
   
@@ -867,9 +841,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.minimize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         minimize
-      
+      </span>
     </span>
   </a>
   
@@ -878,9 +852,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.project" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         project
-      
+      </span>
     </span>
   </a>
   
@@ -889,9 +863,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         rule
-      
+      </span>
     </span>
   </a>
   
@@ -900,9 +874,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_atom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_atom
-      
+      </span>
     </span>
   </a>
   
@@ -911,9 +885,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_element" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_element
-      
+      </span>
     </span>
   </a>
   
@@ -922,9 +896,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_function" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_function
-      
+      </span>
     </span>
   </a>
   
@@ -933,9 +907,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_number" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_number
-      
+      </span>
     </span>
   </a>
   
@@ -944,9 +918,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_sequence
-      
+      </span>
     </span>
   </a>
   
@@ -955,9 +929,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_string" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_string
-      
+      </span>
     </span>
   </a>
   
@@ -966,9 +940,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_symbol" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_symbol
-      
+      </span>
     </span>
   </a>
   
@@ -977,9 +951,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.weight_rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         weight_rule
-      
+      </span>
     </span>
   </a>
   
@@ -993,9 +967,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         BackendManager
-      
+      </span>
     </span>
   </a>
   
@@ -1005,9 +979,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager.__enter__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __enter__
-      
+      </span>
     </span>
   </a>
   
@@ -1016,9 +990,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager.__exit__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __exit__
-      
+      </span>
     </span>
   </a>
   
@@ -1036,10 +1010,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1052,8 +1026,7 @@
   <span class="md-ellipsis">
     
   
-    base
-  
+  base
 
     
   </span>
@@ -1064,10 +1037,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1080,8 +1053,7 @@
   <span class="md-ellipsis">
     
   
-    config
-  
+  config
 
     
   </span>
@@ -1092,10 +1064,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1108,8 +1080,7 @@
   <span class="md-ellipsis">
     
   
-    control
-  
+  control
 
     
   </span>
@@ -1120,10 +1091,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1136,8 +1107,7 @@
   <span class="md-ellipsis">
     
   
-    core
-  
+  core
 
     
   </span>
@@ -1148,10 +1118,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1164,8 +1134,7 @@
   <span class="md-ellipsis">
     
   
-    ground
-  
+  ground
 
     
   </span>
@@ -1176,10 +1145,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1192,8 +1161,7 @@
   <span class="md-ellipsis">
     
   
-    propagate
-  
+  propagate
 
     
   </span>
@@ -1204,10 +1172,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1220,8 +1188,7 @@
   <span class="md-ellipsis">
     
   
-    script
-  
+  script
 
     
   </span>
@@ -1232,10 +1199,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1248,8 +1215,7 @@
   <span class="md-ellipsis">
     
   
-    solve
-  
+  solve
 
     
   </span>
@@ -1260,10 +1226,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1276,8 +1242,7 @@
   <span class="md-ellipsis">
     
   
-    stats
-  
+  stats
 
     
   </span>
@@ -1288,10 +1253,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1304,8 +1269,7 @@
   <span class="md-ellipsis">
     
   
-    symbol
-  
+  symbol
 
     
   </span>
@@ -1316,10 +1280,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1332,8 +1296,7 @@
   <span class="md-ellipsis">
     
   
-    theory
-  
+  theory
 
     
   </span>
@@ -1344,10 +1307,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1363,26 +1327,38 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#clingo.backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         backend
-      
+      </span>
     </span>
   </a>
   
@@ -1392,9 +1368,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend--examples" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Examples
-      
+      </span>
     </span>
   </a>
   
@@ -1408,9 +1384,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HeuristicType
-      
+      </span>
     </span>
   </a>
   
@@ -1420,9 +1396,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Factor" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Factor
-      
+      </span>
     </span>
   </a>
   
@@ -1431,9 +1407,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.False_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         False_
-      
+      </span>
     </span>
   </a>
   
@@ -1442,9 +1418,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Init" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Init
-      
+      </span>
     </span>
   </a>
   
@@ -1453,9 +1429,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Level" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Level
-      
+      </span>
     </span>
   </a>
   
@@ -1464,9 +1440,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.Sign" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Sign
-      
+      </span>
     </span>
   </a>
   
@@ -1475,9 +1451,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.HeuristicType.True_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         True_
-      
+      </span>
     </span>
   </a>
   
@@ -1491,9 +1467,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ExternalType
-      
+      </span>
     </span>
   </a>
   
@@ -1503,9 +1479,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.False_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         False_
-      
+      </span>
     </span>
   </a>
   
@@ -1514,9 +1490,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.Free" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Free
-      
+      </span>
     </span>
   </a>
   
@@ -1525,9 +1501,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.Release" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Release
-      
+      </span>
     </span>
   </a>
   
@@ -1536,9 +1512,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.ExternalType.True_" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         True_
-      
+      </span>
     </span>
   </a>
   
@@ -1552,9 +1528,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         TheorySequenceType
-      
+      </span>
     </span>
   </a>
   
@@ -1564,9 +1540,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.List" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         List
-      
+      </span>
     </span>
   </a>
   
@@ -1575,9 +1551,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.Set" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Set
-      
+      </span>
     </span>
   </a>
   
@@ -1586,9 +1562,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.TheorySequenceType.Tuple" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Tuple
-      
+      </span>
     </span>
   </a>
   
@@ -1602,9 +1578,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.Observer" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Observer
-      
+      </span>
     </span>
   </a>
   
@@ -1614,9 +1590,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.assume" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         assume
-      
+      </span>
     </span>
   </a>
   
@@ -1625,9 +1601,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.begin_step" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         begin_step
-      
+      </span>
     </span>
   </a>
   
@@ -1636,9 +1612,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.edge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         edge
-      
+      </span>
     </span>
   </a>
   
@@ -1647,9 +1623,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.end_step" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         end_step
-      
+      </span>
     </span>
   </a>
   
@@ -1658,9 +1634,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.external" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         external
-      
+      </span>
     </span>
   </a>
   
@@ -1669,9 +1645,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.heuristic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         heuristic
-      
+      </span>
     </span>
   </a>
   
@@ -1680,9 +1656,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.init_program" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         init_program
-      
+      </span>
     </span>
   </a>
   
@@ -1691,9 +1667,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.minimize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         minimize
-      
+      </span>
     </span>
   </a>
   
@@ -1702,9 +1678,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.project" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         project
-      
+      </span>
     </span>
   </a>
   
@@ -1713,9 +1689,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         rule
-      
+      </span>
     </span>
   </a>
   
@@ -1724,9 +1700,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Observer.weight_rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         weight_rule
-      
+      </span>
     </span>
   </a>
   
@@ -1740,9 +1716,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.Backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Backend
-      
+      </span>
     </span>
   </a>
   
@@ -1752,9 +1728,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.assume" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         assume
-      
+      </span>
     </span>
   </a>
   
@@ -1763,9 +1739,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.atom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         atom
-      
+      </span>
     </span>
   </a>
   
@@ -1774,9 +1750,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.edge" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         edge
-      
+      </span>
     </span>
   </a>
   
@@ -1785,9 +1761,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.external" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         external
-      
+      </span>
     </span>
   </a>
   
@@ -1796,9 +1772,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.heuristic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         heuristic
-      
+      </span>
     </span>
   </a>
   
@@ -1807,9 +1783,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.minimize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         minimize
-      
+      </span>
     </span>
   </a>
   
@@ -1818,9 +1794,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.project" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         project
-      
+      </span>
     </span>
   </a>
   
@@ -1829,9 +1805,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         rule
-      
+      </span>
     </span>
   </a>
   
@@ -1840,9 +1816,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_atom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_atom
-      
+      </span>
     </span>
   </a>
   
@@ -1851,9 +1827,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_element" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_element
-      
+      </span>
     </span>
   </a>
   
@@ -1862,9 +1838,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_function" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_function
-      
+      </span>
     </span>
   </a>
   
@@ -1873,9 +1849,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_number" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_number
-      
+      </span>
     </span>
   </a>
   
@@ -1884,9 +1860,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_sequence" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_sequence
-      
+      </span>
     </span>
   </a>
   
@@ -1895,9 +1871,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_string" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_string
-      
+      </span>
     </span>
   </a>
   
@@ -1906,9 +1882,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.theory_symbol" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         theory_symbol
-      
+      </span>
     </span>
   </a>
   
@@ -1917,9 +1893,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.Backend.weight_rule" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         weight_rule
-      
+      </span>
     </span>
   </a>
   
@@ -1933,9 +1909,9 @@
         <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         BackendManager
-      
+      </span>
     </span>
   </a>
   
@@ -1945,9 +1921,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager.__enter__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __enter__
-      
+      </span>
     </span>
   </a>
   
@@ -1956,9 +1932,9 @@
           <li class="md-nav__item">
   <a href="#clingo.backend.BackendManager.__exit__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __exit__
-      
+      </span>
     </span>
   </a>
   
@@ -1985,8 +1961,7 @@
                   
 
 
-
-  <h1>backend</h1>
+  <h1 id="__skip">backend</h1>
 
 <div class="doc doc-object doc-module">
 
@@ -2556,7 +2531,7 @@ not needed.</p>
     <div class="doc doc-contents ">
 
         <p>Called for assumptions in the solver.</p>
-<p>See also <code>Backend.assume</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="assume" href="./#clingo.backend.Backend.assume"><code>assume</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2630,7 +2605,7 @@ not needed.</p>
     <div class="doc doc-contents ">
 
         <p>Called for edge directives in the program.</p>
-<p>See also <code>Backend.edge</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="edge" href="./#clingo.backend.Backend.edge"><code>edge</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2728,13 +2703,13 @@ not needed.</p>
 
 
 </h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">external</span><span class="p">(</span><span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="#clingo.backend.ExternalType">ExternalType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">external</span><span class="p">(</span><span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="./#clingo.backend.ExternalType">ExternalType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Called for external directives in the program.</p>
-<p>See also <code>Backend.external</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="external" href="./#clingo.backend.Backend.external"><code>external</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2769,7 +2744,7 @@ not needed.</p>
                 <code>type</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="#clingo.backend.ExternalType">ExternalType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="./#clingo.backend.ExternalType">ExternalType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2798,7 +2773,7 @@ not needed.</p>
 </h3>
 <div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">heuristic</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="#clingo.backend.HeuristicType">HeuristicType</a></span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="./#clingo.backend.HeuristicType">HeuristicType</a></span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">weight</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">priority</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">condition</span><span class="p">:</span> <span class="n"><span title="typing.Sequence">Sequence</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">],</span>
@@ -2808,7 +2783,7 @@ not needed.</p>
     <div class="doc doc-contents ">
 
         <p>Called for heuristic directives in the program.</p>
-<p>See also <code>Backend.heuristic</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="heuristic" href="./#clingo.backend.Backend.heuristic"><code>heuristic</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2843,7 +2818,7 @@ not needed.</p>
                 <code>type</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="#clingo.backend.HeuristicType">HeuristicType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="./#clingo.backend.HeuristicType">HeuristicType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2979,7 +2954,7 @@ than one step.</p>
     <div class="doc doc-contents ">
 
         <p>Called for minimize constraints in the program.</p>
-<p>See also <code>Backend.minimize</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="minimize" href="./#clingo.backend.Backend.minimize"><code>minimize</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3047,7 +3022,7 @@ than one step.</p>
     <div class="doc doc-contents ">
 
         <p>Called for projection directives in the program.</p>
-<p>See also <code>Backend.project</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="project" href="./#clingo.backend.Backend.project"><code>project</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3101,7 +3076,7 @@ than one step.</p>
     <div class="doc doc-contents ">
 
         <p>Called for rules in the program.</p>
-<p>See also <code>Backend.rule</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="rule" href="./#clingo.backend.Backend.rule"><code>rule</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3190,7 +3165,7 @@ than one step.</p>
     <div class="doc doc-contents ">
 
         <p>Called for weight rules in the program.</p>
-<p>See also <code>Backend.weight_rule</code>.</p>
+<p>See also <a class="autorefs autorefs-internal" title="weight_rule" href="./#clingo.backend.Backend.weight_rule"><code>weight_rule</code></a>.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3555,7 +3530,7 @@ specified condition.</p>
 
 
 </h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">external</span><span class="p">(</span><span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="#clingo.backend.ExternalType">ExternalType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">external</span><span class="p">(</span><span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="./#clingo.backend.ExternalType">ExternalType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3563,8 +3538,14 @@ specified condition.</p>
         <p>Add an external directive.</p>
 <p>Declares an atom as external and sets its truth value according to the
 specified type. External atoms can be used as assumptions or for incremental
-solving. The special value <code>ExternalType.Release</code> can be used to permanently
-set an external atom to false.</p>
+solving. The special value <a class="autorefs autorefs-internal" title="Release
+
+
+  
+      class-attribute
+      instance-attribute
+  " href="./#clingo.backend.ExternalType.Release"><code>Release</code></a> can be used to
+permanently set an external atom to false.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3599,7 +3580,7 @@ set an external atom to false.</p>
                 <code>type</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="#clingo.backend.ExternalType">ExternalType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="ExternalType (clingo.backend.ExternalType)" href="./#clingo.backend.ExternalType">ExternalType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3628,7 +3609,7 @@ set an external atom to false.</p>
 </h3>
 <div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">heuristic</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">atom</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="#clingo.backend.HeuristicType">HeuristicType</a></span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="./#clingo.backend.HeuristicType">HeuristicType</a></span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">weight</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">priority</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">condition</span><span class="p">:</span> <span class="n"><span title="typing.Sequence">Sequence</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
@@ -3675,7 +3656,7 @@ condition, if provided, determines when the heuristic should be applied.</p>
                 <code>type</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="#clingo.backend.HeuristicType">HeuristicType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="HeuristicType (clingo.backend.HeuristicType)" href="./#clingo.backend.HeuristicType">HeuristicType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4368,7 +4349,7 @@ reference this term.</p>
 
 </h3>
 <div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">theory_sequence</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="TheorySequenceType (clingo.backend.TheorySequenceType)" href="#clingo.backend.TheorySequenceType">TheorySequenceType</a></span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="n"><span title="typing.Sequence">Sequence</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nb">type</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="TheorySequenceType (clingo.backend.TheorySequenceType)" href="./#clingo.backend.TheorySequenceType">TheorySequenceType</a></span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="n"><span title="typing.Sequence">Sequence</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="int">int</span></span>
 </code></pre></div>
 
@@ -4396,7 +4377,7 @@ theory-related methods to reference this term.</p>
                 <code>type</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="TheorySequenceType (clingo.backend.TheorySequenceType)" href="#clingo.backend.TheorySequenceType">TheorySequenceType</a></code>
+                  <code><a class="autorefs autorefs-internal" title="TheorySequenceType (clingo.backend.TheorySequenceType)" href="./#clingo.backend.TheorySequenceType">TheorySequenceType</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4770,7 +4751,7 @@ meets or exceeds the lower bound.</p>
 
 
 </h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">__enter__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="Backend (clingo.backend.Backend)" href="#clingo.backend.Backend">Backend</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">__enter__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="Backend (clingo.backend.Backend)" href="./#clingo.backend.Backend">Backend</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4834,6 +4815,8 @@ meets or exceeds the lower bound.</p>
 
 
 
+
+
                 
               </article>
             </div>
@@ -4852,8 +4835,8 @@ meets or exceeds the lower bound.</p>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -4863,7 +4846,7 @@ meets or exceeds the lower bound.</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -4871,10 +4854,14 @@ meets or exceeds the lower bound.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.expand", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","navigation.expand","content.code.copy","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.67a597eb.min.js"></script>
       
     
   </body>

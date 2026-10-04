@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.67">
     
     
       
@@ -27,10 +27,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.4ae390e2.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.96d1a7e4.min.css">
       
       
 
@@ -44,14 +49,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -72,7 +75,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -95,12 +98,12 @@
     <a href="../.." title="clingo API reference" class="md-header__button md-logo" aria-label="clingo API reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -152,45 +155,20 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -219,7 +197,7 @@
     <a href="../.." title="clingo API reference" class="md-nav__button md-logo" aria-label="clingo API reference" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     clingo API reference
@@ -289,8 +267,7 @@
   <span class="md-ellipsis">
     
   
-    clingo
-  
+  clingo
 
     
   </span>
@@ -306,21 +283,21 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    clingo
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
               
-            
+  
+  clingo
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+              
+                
+                  
   
   
   
@@ -333,8 +310,7 @@
   <span class="md-ellipsis">
     
   
-    app
-  
+  app
 
     
   </span>
@@ -345,10 +321,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -361,8 +337,7 @@
   <span class="md-ellipsis">
     
   
-    ast
-  
+  ast
 
     
   </span>
@@ -373,10 +348,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -389,8 +364,7 @@
   <span class="md-ellipsis">
     
   
-    backend
-  
+  backend
 
     
   </span>
@@ -401,10 +375,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -417,8 +391,7 @@
   <span class="md-ellipsis">
     
   
-    base
-  
+  base
 
     
   </span>
@@ -429,10 +402,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -445,8 +418,7 @@
   <span class="md-ellipsis">
     
   
-    config
-  
+  config
 
     
   </span>
@@ -457,10 +429,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -469,7 +441,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
       
@@ -480,8 +452,7 @@
   <span class="md-ellipsis">
     
   
-    control
-  
+  control
 
     
   </span>
@@ -491,15 +462,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    control
-  
+  control
 
     
   </span>
@@ -510,23 +480,24 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#clingo.control" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         control
-      
+      </span>
     </span>
   </a>
   
@@ -535,9 +506,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control--example" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Example
-      
+      </span>
     </span>
   </a>
   
@@ -546,9 +517,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control.ControlMode" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ControlMode
-      
+      </span>
     </span>
   </a>
   
@@ -558,9 +529,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Ground
-      
+      </span>
     </span>
   </a>
   
@@ -569,9 +540,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Parse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Parse
-      
+      </span>
     </span>
   </a>
   
@@ -580,9 +551,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Rewrite" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Rewrite
-      
+      </span>
     </span>
   </a>
   
@@ -591,9 +562,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Solve
-      
+      </span>
     </span>
   </a>
   
@@ -607,9 +578,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control._ConstMap" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         _ConstMap
-      
+      </span>
     </span>
   </a>
   
@@ -619,9 +590,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__contains__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __contains__
-      
+      </span>
     </span>
   </a>
   
@@ -630,9 +601,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__getitem__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __getitem__
-      
+      </span>
     </span>
   </a>
   
@@ -641,9 +612,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__iter__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __iter__
-      
+      </span>
     </span>
   </a>
   
@@ -652,9 +623,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__len__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __len__
-      
+      </span>
     </span>
   </a>
   
@@ -663,9 +634,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.get" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         get
-      
+      </span>
     </span>
   </a>
   
@@ -674,9 +645,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.items" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         items
-      
+      </span>
     </span>
   </a>
   
@@ -685,9 +656,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.keys" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         keys
-      
+      </span>
     </span>
   </a>
   
@@ -696,9 +667,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.values" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         values
-      
+      </span>
     </span>
   </a>
   
@@ -712,9 +683,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control.Control" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Control
-      
+      </span>
     </span>
   </a>
   
@@ -724,9 +695,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         backend
-      
+      </span>
     </span>
   </a>
   
@@ -735,9 +706,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.base" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         base
-      
+      </span>
     </span>
   </a>
   
@@ -746,9 +717,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.buffer" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         buffer
-      
+      </span>
     </span>
   </a>
   
@@ -757,9 +728,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.config" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         config
-      
+      </span>
     </span>
   </a>
   
@@ -768,9 +739,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.const_map" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         const_map
-      
+      </span>
     </span>
   </a>
   
@@ -779,9 +750,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.mode" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         mode
-      
+      </span>
     </span>
   </a>
   
@@ -790,9 +761,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parts" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parts
-      
+      </span>
     </span>
   </a>
   
@@ -801,9 +772,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.profile" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         profile
-      
+      </span>
     </span>
   </a>
   
@@ -812,9 +783,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.stats" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         stats
-      
+      </span>
     </span>
   </a>
   
@@ -823,9 +794,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.discard" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         discard
-      
+      </span>
     </span>
   </a>
   
@@ -834,9 +805,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ground
-      
+      </span>
     </span>
   </a>
   
@@ -845,9 +816,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.interrupt" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         interrupt
-      
+      </span>
     </span>
   </a>
   
@@ -856,9 +827,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.join" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         join
-      
+      </span>
     </span>
   </a>
   
@@ -867,9 +838,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.main" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         main
-      
+      </span>
     </span>
   </a>
   
@@ -878,9 +849,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.observe" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         observe
-      
+      </span>
     </span>
   </a>
   
@@ -889,9 +860,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parse_files" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parse_files
-      
+      </span>
     </span>
   </a>
   
@@ -900,9 +871,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parse_string" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parse_string
-      
+      </span>
     </span>
   </a>
   
@@ -911,9 +882,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.register_propagator" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         register_propagator
-      
+      </span>
     </span>
   </a>
   
@@ -922,9 +893,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         solve
-      
+      </span>
     </span>
   </a>
   
@@ -933,9 +904,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.start_ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         start_ground
-      
+      </span>
     </span>
   </a>
   
@@ -944,9 +915,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.start_solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         start_solve
-      
+      </span>
     </span>
   </a>
   
@@ -955,9 +926,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.write_aspif" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         write_aspif
-      
+      </span>
     </span>
   </a>
   
@@ -975,10 +946,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -991,8 +962,7 @@
   <span class="md-ellipsis">
     
   
-    core
-  
+  core
 
     
   </span>
@@ -1003,10 +973,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1019,8 +989,7 @@
   <span class="md-ellipsis">
     
   
-    ground
-  
+  ground
 
     
   </span>
@@ -1031,10 +1000,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1047,8 +1016,7 @@
   <span class="md-ellipsis">
     
   
-    propagate
-  
+  propagate
 
     
   </span>
@@ -1059,10 +1027,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1075,8 +1043,7 @@
   <span class="md-ellipsis">
     
   
-    script
-  
+  script
 
     
   </span>
@@ -1087,10 +1054,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1103,8 +1070,7 @@
   <span class="md-ellipsis">
     
   
-    solve
-  
+  solve
 
     
   </span>
@@ -1115,10 +1081,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1131,8 +1097,7 @@
   <span class="md-ellipsis">
     
   
-    stats
-  
+  stats
 
     
   </span>
@@ -1143,10 +1108,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1159,8 +1124,7 @@
   <span class="md-ellipsis">
     
   
-    symbol
-  
+  symbol
 
     
   </span>
@@ -1171,10 +1135,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1187,8 +1151,7 @@
   <span class="md-ellipsis">
     
   
-    theory
-  
+  theory
 
     
   </span>
@@ -1199,10 +1162,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1218,26 +1182,38 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#clingo.control" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         control
-      
+      </span>
     </span>
   </a>
   
@@ -1246,9 +1222,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control--example" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Example
-      
+      </span>
     </span>
   </a>
   
@@ -1257,9 +1233,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control.ControlMode" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ControlMode
-      
+      </span>
     </span>
   </a>
   
@@ -1269,9 +1245,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Ground
-      
+      </span>
     </span>
   </a>
   
@@ -1280,9 +1256,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Parse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Parse
-      
+      </span>
     </span>
   </a>
   
@@ -1291,9 +1267,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Rewrite" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Rewrite
-      
+      </span>
     </span>
   </a>
   
@@ -1302,9 +1278,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.ControlMode.Solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Solve
-      
+      </span>
     </span>
   </a>
   
@@ -1318,9 +1294,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control._ConstMap" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         _ConstMap
-      
+      </span>
     </span>
   </a>
   
@@ -1330,9 +1306,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__contains__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __contains__
-      
+      </span>
     </span>
   </a>
   
@@ -1341,9 +1317,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__getitem__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __getitem__
-      
+      </span>
     </span>
   </a>
   
@@ -1352,9 +1328,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__iter__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __iter__
-      
+      </span>
     </span>
   </a>
   
@@ -1363,9 +1339,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.__len__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __len__
-      
+      </span>
     </span>
   </a>
   
@@ -1374,9 +1350,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.get" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         get
-      
+      </span>
     </span>
   </a>
   
@@ -1385,9 +1361,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.items" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         items
-      
+      </span>
     </span>
   </a>
   
@@ -1396,9 +1372,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.keys" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         keys
-      
+      </span>
     </span>
   </a>
   
@@ -1407,9 +1383,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control._ConstMap.values" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         values
-      
+      </span>
     </span>
   </a>
   
@@ -1423,9 +1399,9 @@
         <li class="md-nav__item">
   <a href="#clingo.control.Control" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Control
-      
+      </span>
     </span>
   </a>
   
@@ -1435,9 +1411,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.backend" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         backend
-      
+      </span>
     </span>
   </a>
   
@@ -1446,9 +1422,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.base" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         base
-      
+      </span>
     </span>
   </a>
   
@@ -1457,9 +1433,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.buffer" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         buffer
-      
+      </span>
     </span>
   </a>
   
@@ -1468,9 +1444,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.config" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         config
-      
+      </span>
     </span>
   </a>
   
@@ -1479,9 +1455,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.const_map" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         const_map
-      
+      </span>
     </span>
   </a>
   
@@ -1490,9 +1466,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.mode" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         mode
-      
+      </span>
     </span>
   </a>
   
@@ -1501,9 +1477,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parts" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parts
-      
+      </span>
     </span>
   </a>
   
@@ -1512,9 +1488,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.profile" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         profile
-      
+      </span>
     </span>
   </a>
   
@@ -1523,9 +1499,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.stats" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         stats
-      
+      </span>
     </span>
   </a>
   
@@ -1534,9 +1510,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.discard" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         discard
-      
+      </span>
     </span>
   </a>
   
@@ -1545,9 +1521,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         ground
-      
+      </span>
     </span>
   </a>
   
@@ -1556,9 +1532,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.interrupt" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         interrupt
-      
+      </span>
     </span>
   </a>
   
@@ -1567,9 +1543,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.join" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         join
-      
+      </span>
     </span>
   </a>
   
@@ -1578,9 +1554,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.main" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         main
-      
+      </span>
     </span>
   </a>
   
@@ -1589,9 +1565,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.observe" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         observe
-      
+      </span>
     </span>
   </a>
   
@@ -1600,9 +1576,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parse_files" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parse_files
-      
+      </span>
     </span>
   </a>
   
@@ -1611,9 +1587,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.parse_string" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         parse_string
-      
+      </span>
     </span>
   </a>
   
@@ -1622,9 +1598,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.register_propagator" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         register_propagator
-      
+      </span>
     </span>
   </a>
   
@@ -1633,9 +1609,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         solve
-      
+      </span>
     </span>
   </a>
   
@@ -1644,9 +1620,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.start_ground" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         start_ground
-      
+      </span>
     </span>
   </a>
   
@@ -1655,9 +1631,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.start_solve" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         start_solve
-      
+      </span>
     </span>
   </a>
   
@@ -1666,9 +1642,9 @@
           <li class="md-nav__item">
   <a href="#clingo.control.Control.write_aspif" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         write_aspif
-      
+      </span>
     </span>
   </a>
   
@@ -1695,8 +1671,7 @@
                   
 
 
-
-  <h1>control</h1>
+  <h1 id="__skip">control</h1>
 
 <div class="doc doc-object doc-module">
 
@@ -2306,7 +2281,7 @@ small test program:</p>
   </span>
 
 </h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">mode</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ControlMode (clingo.control.ControlMode)" href="#clingo.control.ControlMode">ControlMode</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">mode</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ControlMode (clingo.control.ControlMode)" href="./#clingo.control.ControlMode">ControlMode</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2511,11 +2486,10 @@ symbols.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">A</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">tuples</span><span class="p">,</span> <span class="n">each</span> <span class="n">containing</span> <span class="n">a</span> <span class="n">section</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">sequence</span> <span class="n">of</span>
-    <span class="n">symbols</span><span class="o">.</span> <span class="n">The</span> <span class="n">name</span> <span class="n">identifies</span> <span class="n">the</span> <span class="n">program</span> <span class="n">section</span> <span class="n">to</span> <span class="n">ground</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span>
-    <span class="n">symbols</span> <span class="n">bind</span> <span class="n">its</span> <span class="n">parameters</span><span class="o">.</span>  <span class="n">If</span> <span class="err">`</span><span class="kc">None</span><span class="err">`</span><span class="p">,</span> <span class="n">the</span> <span class="n">implicit</span> <span class="n">base</span> <span class="n">section</span>
-    <span class="n">without</span> <span class="n">arguments</span> <span class="ow">is</span> <span class="n">grounded</span><span class="o">.</span>
-</code></pre></div>
+                <p>A sequence of tuples, each containing a section name and a sequence of
+symbols. The name identifies the program section to ground, and the
+symbols bind its parameters.  If <code>None</code>, the implicit base section
+without arguments is grounded.</p>
               </div>
             </td>
             <td>
@@ -2531,9 +2505,8 @@ symbols.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">An</span> <span class="n">optional</span> <span class="nb">object</span> <span class="n">providing</span> <span class="n">functions</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">called</span> <span class="n">during</span>
-    <span class="n">grounding</span><span class="o">.</span>
-</code></pre></div>
+                <p>An optional object providing functions that can be called during
+grounding.</p>
               </div>
             </td>
             <td>
@@ -2689,13 +2662,27 @@ programs, registering propagators, or performing other setup steps.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The program observer to inspect the program.
-preprocess:
-        Whether the program should be preprocessed first (default: True).</p>
+                <p>The program observer to inspect the program.</p>
               </div>
             </td>
             <td>
                 <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>preprocess</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether the program should be preprocessed first (default: True).</p>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
             </td>
           </tr>
       </tbody>
@@ -2906,8 +2893,7 @@ preprocess:
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">A</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">assumptions</span><span class="o">.</span>
-</code></pre></div>
+                <p>A list of assumptions.</p>
               </div>
             </td>
             <td>
@@ -2971,8 +2957,7 @@ preprocess:
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">Optional</span> <span class="n">callback</span> <span class="n">called</span> <span class="n">once</span> <span class="n">search</span> <span class="n">has</span> <span class="n">finished</span><span class="o">.</span>
-</code></pre></div>
+                <p>Optional callback called once search has finished.</p>
               </div>
             </td>
             <td>
@@ -3010,8 +2995,8 @@ preprocess:
 
         <p>Ground the given program parts.</p>
 <p>Starts grounding in the background and returns a <a class="autorefs autorefs-internal" title="GroundHandle" href="../ground/#clingo.ground.GroundHandle"><code>GroundHandle</code></a>
-to the running grounding. See <code>Control.ground</code> for details on grounding program
-parts.</p>
+to the running grounding. See <a class="autorefs autorefs-internal" title="ground" href="./#clingo.control.Control.ground"><code>ground</code></a> for details on
+grounding program parts.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -3034,8 +3019,7 @@ parts.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">A</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">parts</span> <span class="n">to</span> <span class="n">ground</span><span class="o">.</span>
-</code></pre></div>
+                <p>A sequence of parts to ground.</p>
               </div>
             </td>
             <td>
@@ -3051,9 +3035,8 @@ parts.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">An</span> <span class="n">optional</span> <span class="nb">object</span> <span class="n">providing</span> <span class="n">functions</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">called</span> <span class="n">during</span>
-    <span class="n">grounding</span><span class="o">.</span>
-</code></pre></div>
+                <p>An optional object providing functions that can be called during
+grounding.</p>
               </div>
             </td>
             <td>
@@ -3134,12 +3117,16 @@ blocks until solving is complete.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">A</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">assumptions</span> <span class="n">that</span> <span class="n">constrain</span> <span class="n">this</span> <span class="n">search</span><span class="o">.</span> <span class="n">Each</span> <span class="n">assumption</span> <span class="ow">is</span>
-    <span class="n">either</span> <span class="n">a</span> <span class="err">`</span><span class="nb">tuple</span><span class="p">[</span><span class="n">clingo</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">Symbol</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span><span class="err">`</span> <span class="n">indicating</span> <span class="n">an</span> <span class="n">atom</span><span class="s1">'s truth</span>
-    <span class="n">value</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">program</span> <span class="n">literal</span> <span class="p">(</span><span class="n">see</span> <span class="p">[</span><span class="err">`</span><span class="n">literal</span><span class="err">`</span><span class="p">][</span><span class="n">clingo</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">Atom</span><span class="o">.</span><span class="n">literal</span><span class="p">])</span><span class="o">.</span> <span class="n">For</span>
-    <span class="n">example</span><span class="p">,</span> <span class="n">using</span> <span class="err">`</span><span class="p">[(</span><span class="n">clingo</span><span class="o">.</span><span class="n">symbol</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="n">lib</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">),</span> <span class="kc">True</span><span class="p">)]</span><span class="err">`</span> <span class="n">only</span> <span class="n">admits</span>
-    <span class="n">answer</span> <span class="n">sets</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">atom</span> <span class="err">`</span><span class="n">a</span><span class="err">`</span><span class="o">.</span>
-</code></pre></div>
+                <p>A list of assumptions that constrain this search. Each assumption is
+either a <code>tuple[clingo.symbol.Symbol, bool]</code> indicating an atom's truth
+value or a program literal (see <a class="autorefs autorefs-internal" title="literal
+
+
+  
+      property
+  " href="../base/#clingo.base.Atom.literal"><code>literal</code></a>). For
+example, using <code>[(clingo.symbol.Function(lib, "a"), True)]</code> only admits
+answer sets that contain atom <code>a</code>.</p>
               </div>
             </td>
             <td>
@@ -3206,9 +3193,8 @@ accumulated stats.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">Optional</span> <span class="n">callback</span> <span class="n">called</span> <span class="n">once</span> <span class="n">search</span> <span class="n">has</span> <span class="n">finished</span><span class="o">.</span> <span class="n">A</span>
-    <span class="p">[</span><span class="err">`</span><span class="n">SolveResult</span><span class="err">`</span><span class="p">][</span><span class="n">clingo</span><span class="o">.</span><span class="n">solve</span><span class="o">.</span><span class="n">SolveResult</span><span class="p">]</span> <span class="ow">is</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">the</span> <span class="n">callback</span><span class="o">.</span>
-</code></pre></div>
+                <p>Optional callback called once search has finished. A
+<a class="autorefs autorefs-internal" title="SolveResult" href="../solve/#clingo.solve.SolveResult"><code>SolveResult</code></a> is passed to the callback.</p>
               </div>
             </td>
             <td>
@@ -3224,9 +3210,8 @@ accumulated stats.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <div class="language-python highlight"><pre><span></span><code>    <span class="n">If</span> <span class="err">`</span><span class="kc">True</span><span class="err">`</span><span class="p">,</span> <span class="n">the</span> <span class="n">returned</span> <span class="p">[</span><span class="err">`</span><span class="n">SolveHandle</span><span class="err">`</span><span class="p">][</span><span class="n">clingo</span><span class="o">.</span><span class="n">solve</span><span class="o">.</span><span class="n">SolveHandle</span><span class="p">]</span> <span class="ow">is</span> <span class="n">iterable</span><span class="p">,</span>
-    <span class="n">yielding</span>  <span class="p">[</span><span class="err">`</span><span class="n">Model</span><span class="err">`</span><span class="p">][</span><span class="n">clingo</span><span class="o">.</span><span class="n">solve</span><span class="o">.</span><span class="n">Model</span><span class="p">]</span> <span class="n">objects</span> <span class="n">during</span> <span class="n">solving</span><span class="o">.</span>
-</code></pre></div>
+                <p>If <code>True</code>, the returned <a class="autorefs autorefs-internal" title="SolveHandle" href="../solve/#clingo.solve.SolveHandle"><code>SolveHandle</code></a> is iterable,
+yielding  <a class="autorefs autorefs-internal" title="Model" href="../solve/#clingo.solve.Model"><code>Model</code></a> objects during solving.</p>
               </div>
             </td>
             <td>
@@ -3296,10 +3281,16 @@ Blocking methods on <code>SolveHandle</code> release the GIL but are not thread-
 None, then the aspif preamble is written for newly created files and omitted
 for existing files.</p>
 <p>If <code>path</code> is None, clingo's internal output buffer is used instead of writing
-to a file. The buffer content is available via <code>Control.buffer</code>. If <code>preamble</code>
-is None, the preamble is written only if the buffer is currently empty. In
-application mode, the buffer is printed to stdout and cleared after each major
-operation like grounding, so the preamble flag should be set explicitly in this
+to a file. The buffer content is available via <a class="autorefs autorefs-internal" title="buffer
+
+
+  
+      property
+  " href="./#clingo.control.Control.buffer"><code>buffer</code></a>.
+If <code>preamble</code> is None, the preamble is written only if the buffer is currently
+empty. In application mode, the buffer is printed to stdout and cleared after
+each major operation like grounding, so the preamble flag should be set
+explicitly in this
 case.</p>
 
 
@@ -3414,6 +3405,8 @@ case.</p>
 
 
 
+
+
                 
               </article>
             </div>
@@ -3432,8 +3425,8 @@ case.</p>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -3443,7 +3436,7 @@ case.</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -3451,10 +3444,14 @@ case.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.expand", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.indexes","navigation.expand","content.code.copy","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.67a597eb.min.js"></script>
       
     
   </body>
