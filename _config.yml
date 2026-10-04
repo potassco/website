@@ -46,6 +46,7 @@ collections:
 
 include:
   - _headers
+  - clingo/python-api/6.0/assets/_mkdocstrings.css
 
 asciidoc: {}
 asciidoctor:
