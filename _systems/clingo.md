@@ -36,10 +36,16 @@ To get a quick first impression, you may want to experiment with [running clingo
 
 ## Resources
 
-- [Potassco guide on GitHub][guide-github] for series 5 and later
+Clingo series 6 is currently under development. Its documentation is already in
+a good shape and can be found below marked as "wip" (work in progress). As such
+it might change in the future until the release of clingo 6.0.0.
+
+- [Guide](/guide/) for series 6 (wip)
+- [Potassco guide on GitHub][guide-github] for series 5
 - [Potassco guide on Sourceforge][guide-sf] for series 4 and earlier
 - [Formal language specification][ag]
 - [Python API Reference](/clingo/python-api/current/) (versions
+  [6.0 (wip)](/clingo/python-api/6.0/),
   [5.8](/clingo/python-api/5.8/),
   [5.7](/clingo/python-api/5.7/),
   [5.6](/clingo/python-api/5.6/),
@@ -50,6 +56,7 @@ To get a quick first impression, you may want to experiment with [running clingo
   [5.1](/clingo/python-api/5.1/clingo.html),
   [5.0](/clingo/python-api/5.0/clingo.html))
 - [C API Reference](/clingo/c-api/current/) (versions
+  [6.0 (wip)](/clingo/c-api/6.0/),
   [5.8](/clingo/c-api/5.8/),
   [5.6](/clingo/c-api/5.6/),
   [5.5](/clingo/c-api/5.5/),
