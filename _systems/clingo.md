@@ -44,28 +44,27 @@ it might change in the future until the release of clingo 6.0.0.
 - [Potassco guide on GitHub][guide-github] for series 5
 - [Potassco guide on Sourceforge][guide-sf] for series 4 and earlier
 - [Formal language specification][ag]
-- [Python API Reference](/clingo/python-api/current/) (versions
-  [6.0 (wip)](/clingo/python-api/6.0/),
-  [5.8](/clingo/python-api/5.8/),
-  [5.7](/clingo/python-api/5.7/),
-  [5.6](/clingo/python-api/5.6/),
-  [5.5](/clingo/python-api/5.5/),
-  [5.4](/clingo/python-api/5.4/),
-  [5.3](/clingo/python-api/5.3/clingo.html),
-  [5.2](/clingo/python-api/5.2/clingo.html),
-  [5.1](/clingo/python-api/5.1/clingo.html),
-  [5.0](/clingo/python-api/5.0/clingo.html))
-- [C API Reference](/clingo/c-api/current/) (versions
-  [6.0 (wip)](/clingo/c-api/6.0/),
-  [5.8](/clingo/c-api/5.8/),
-  [5.6](/clingo/c-api/5.6/),
-  [5.5](/clingo/c-api/5.5/),
-  [5.4](/clingo/c-api/5.4/),
-  [5.3](/clingo/c-api/5.3/),
-  [5.2](/clingo/c-api/5.2/),
-  [5.1](/clingo/c-api/5.1/),
-  [5.0](/clingo/c-api/5.0/))
-- [Advanced Examples](/clingo/examples/)
+- [Python API Reference](https://docs.potassco.org/clingo/python-api/current/) (versions
+  [6.0 (wip)](https://docs.potassco.org/clingo/python-api/6.0/),
+  [5.8](https://docs.potassco.org/clingo/python-api/5.8/),
+  [5.7](https://docs.potassco.org/clingo/python-api/5.7/),
+  [5.6](https://docs.potassco.org/clingo/python-api/5.6/),
+  [5.5](https://docs.potassco.org/clingo/python-api/5.5/),
+  [5.4](https://docs.potassco.org/clingo/python-api/5.4/),
+  [5.3](https://docs.potassco.org/clingo/python-api/5.3/clingo.html),
+  [5.2](https://docs.potassco.org/clingo/python-api/5.2/clingo.html),
+  [5.1](https://docs.potassco.org/clingo/python-api/5.1/clingo.html),
+  [5.0](https://docs.potassco.org/clingo/python-api/5.0/clingo.html))
+- [C API Reference](https://docs.potassco.org/clingo/c-api/current/) (versions
+  [6.0 (wip)](https://docs.potassco.org/clingo/c-api/6.0/),
+  [5.8](https://docs.potassco.org/clingo/c-api/5.8/),
+  [5.6](https://docs.potassco.org/clingo/c-api/5.6/),
+  [5.5](https://docs.potassco.org/clingo/c-api/5.5/),
+  [5.4](https://docs.potassco.org/clingo/c-api/5.4/),
+  [5.3](https://docs.potassco.org/clingo/c-api/5.3/),
+  [5.2](https://docs.potassco.org/clingo/c-api/5.2/),
+  [5.1](https://docs.potassco.org/clingo/c-api/5.1/),
+  [5.0](https://docs.potassco.org/clingo/c-api/5.0/))
 
 ## Packages
 
