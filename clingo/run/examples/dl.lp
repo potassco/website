@@ -1,3 +1,4 @@
+%%% Options: --out-assign="dl/2"
 %%% Tab: instance.lp
             machine(1).      machine(2).
 task(a). duration(a,1,3). duration(a,2,4).

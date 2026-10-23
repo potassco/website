@@ -176,6 +176,46 @@ const Clingo = (() => {
       }
     };
 
+    const parseOptions = (input) => {
+      const tokens = [];
+      let current = "";
+      let inQuotes = false;
+      let escaped = false;
+
+      for (const char of input) {
+        if (escaped) {
+          current += char;
+          escaped = false;
+          continue;
+        }
+
+        if (char === "\\") {
+          escaped = true;
+          continue;
+        }
+
+        if (char === '"') {
+          inQuotes = !inQuotes;
+          continue;
+        }
+
+        if (/\s/.test(char) && !inQuotes) {
+          if (current) {
+            tokens.push(current);
+            current = "";
+          }
+          continue;
+        }
+
+        current += char;
+      }
+
+      if (escaped) current += "\\";
+      if (current) tokens.push(current);
+
+      return tokens;
+    };
+
     const stripAnsiCodes = (input) => input.replace(/\x1b\[[0-9;]*m/g, "");
 
     return {
@@ -185,6 +225,7 @@ const Clingo = (() => {
       stripAnsiCodes,
       ansiToHtml,
       escapeHtml,
+      parseOptions,
     };
   })();
 
@@ -203,6 +244,7 @@ const Clingo = (() => {
     constructor() {
       this.entries = [];
       this.active = null;
+      this.options = [];
     }
 
     /**
@@ -292,6 +334,22 @@ const Clingo = (() => {
         const name = Utils.sanitize(entry.name, existing);
         return { name, type: entry.type, content: entry.session.getValue() };
       });
+    }
+
+    /**
+     * Sets the extra options for the session.
+     */
+    setOptions(options) {
+      this.options = options;
+    }
+
+    /**
+     * Get the session options.
+     *
+     * @returns {string[]} Array of options.
+     */
+    getOptions() {
+      return this.options;
     }
   }
 
@@ -502,11 +560,14 @@ const Clingo = (() => {
      * @returns {string} JSON representation of all session entries.
      */
     serialize() {
-      const data = this.model.getEntries().map((entry) => ({
-        type: entry.type,
-        name: entry.name,
-        content: entry.session.getValue(),
-      }));
+      const data = {
+        options: this.model.getOptions(),
+        tabs: this.model.getEntries().map((entry) => ({
+          type: entry.type,
+          name: entry.name,
+          content: entry.session.getValue(),
+        })),
+      };
       return JSON.stringify(data);
     }
 
@@ -516,9 +577,11 @@ const Clingo = (() => {
      * @param {string} repr JSON representation of all session entries.
      */
     deserialize(repr) {
-      const data = JSON.parse(repr || "[]");
+      const data = JSON.parse(repr || "{}");
+      const tabs = data.tabs || [];
       this.clear();
-      data.forEach((tab) => {
+      this.model.setOptions(data.options || []);
+      tabs.forEach((tab) => {
         this.create(tab.type, tab.name, tab.content);
       });
     }
@@ -557,6 +620,7 @@ const Clingo = (() => {
       this.view.close(entry);
       if (this.model.getEntries().length === 0) {
         this.create("clingo", "Untitled");
+        this.options = [];
       } else {
         this.activate(this.model.getActive());
       }
@@ -596,6 +660,22 @@ const Clingo = (() => {
     }
 
     /**
+     * Get the session options.
+     */
+    getOptions() {
+      return this.model.getOptions();
+    }
+
+    /**
+     * Set the session options.
+     *
+     * @param {string[]} options - Array of options.
+     */
+    setOptions(options) {
+      this.model.setOptions(options);
+    }
+
+    /**
      * Parses the input string into tabs and creates them in the model and
      * view.
      *
@@ -603,6 +683,13 @@ const Clingo = (() => {
      * @param {string} name - The default name for the first tab if no marker is present.
      */
     restore(value, name) {
+      let options = [];
+      value = value.replace(/^%%% Options:\s*(.*)(?:\r?\n|$)/gm, (_, value) => {
+        options.push(...Utils.parseOptions(value));
+        return "";
+      });
+      this.setOptions(options);
+
       const tabs = Utils.splitInput(value, name);
       this.clear();
       tabs.forEach((tab) => {
@@ -856,6 +943,24 @@ const Clingo = (() => {
     }
 
     /**
+     * Get the session options.
+     *
+     * @returns {string[]} Array of options.
+     */
+    getOptions() {
+      return this.session.getOptions();
+    }
+
+    /**
+     * Set session options.
+     *
+     * @param {string[]} options - Array of options.
+     */
+    setOptions(options) {
+      this.session.setOptions(options);
+    }
+
+    /**
      * Returns an array of file objects for all session entries.
      *
      * Each file object contains a unique, sanitized name and its content.
@@ -978,6 +1083,7 @@ const Clingo = (() => {
         '.language-switch input[type="checkbox"]',
       );
       this.examples = document.getElementById("examples");
+      this.optionsEditButton = document.getElementById("options-edit");
 
       // Event listeners for UI actions
       this.runButton.onclick = () =>
@@ -990,6 +1096,8 @@ const Clingo = (() => {
         this.dispatchEvent(
           new CustomEvent("python-toggle", { detail: e.target.checked }),
         );
+      this.optionsEditButton.onclick = () =>
+        this.dispatchEvent(new CustomEvent("options-edit-request"));
       document.querySelector("#input").addEventListener("keydown", (ev) => {
         if (ev.key === "Enter" && ev.ctrlKey) {
           this.dispatchEvent(new CustomEvent("run-request"));
@@ -1295,10 +1403,11 @@ const Clingo = (() => {
       this.workspaceController = new WorkspaceController();
 
       this.view.addEventListener("run-request", () => {
-        this.model.run(
-          this.view.buildArgs(),
-          this.workspaceController.getFiles(),
-        );
+        const args = [
+          ...this.workspaceController.getOptions(),
+          ...this.view.buildArgs(),
+        ];
+        this.model.run(args, this.workspaceController.getFiles());
         // NOTE: Triggering a run might implicitely enable Python.
         this.view.setPython(this.model.py);
       });
@@ -1306,6 +1415,9 @@ const Clingo = (() => {
         this.model.enablePython(e.detail),
       );
       this.view.addEventListener("example-selected", () => this.load());
+      this.view.addEventListener("options-edit-request", () =>
+        this.editOptions(),
+      );
 
       this.model.addEventListener("output-append", (e) =>
         this.view.updateOutput(e.detail),
@@ -1327,6 +1439,25 @@ const Clingo = (() => {
         this.load();
       }
       this.model.startWorker();
+    }
+
+    /**
+     * Opens a prompt to edit session-level clingo options.
+     */
+    editOptions() {
+      const currentOptions = this.workspaceController.getOptions();
+      const serialized = currentOptions
+        .map((option) =>
+          /[\s"\\]/.test(option)
+            ? `"${option.replace(/([\\"])/g, "\\$1")}"`
+            : option,
+        )
+        .join(" ");
+      const input = prompt("Set advanced clingo options:", serialized);
+      if (input === null) {
+        return;
+      }
+      this.workspaceController.setOptions(Utils.parseOptions(input));
     }
 
     /**
