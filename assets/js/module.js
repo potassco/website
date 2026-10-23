@@ -801,12 +801,13 @@ const Clingo = (() => {
       const existingWS = {};
       for (const wsName of workspaceNames) {
         const data = JSON.parse(
-          localStorage.getItem("workspace:" + wsName) || "[]",
+          localStorage.getItem("workspace:" + wsName) || "{}",
         );
+        const tabs = data.tabs || [];
         const folder = zip.folder(Utils.sanitize(wsName, existingWS));
         const existingLP = {};
         const existingPY = {};
-        data.forEach((file) => {
+        tabs.forEach((file) => {
           let existing = file.type === "python" ? existingPY : existingLP;
           folder.file(Utils.sanitize(file.name, existing), file.content);
         });
