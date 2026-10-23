@@ -102,6 +102,65 @@ def _evaluate(lib: Library, term: TheoryTerm) -> Symbol:
 
     raise RuntimeError("Invalid Syntax")
 
+class Fixup:
+    def __init__(self, z, potential, graph):
+        self.zero = z
+        self.values = {}
+        self.max_shift = {}
+        self.edges = {}
+        self.outgoing = {}
+        self.incoming = {}
+
+        if z in potential:
+            val_z = potential[z]
+        else:
+            val_z = 0
+            self.values[z] = 0
+        for u, val_u in potential.items():
+            self.values[u] = -val_u - -val_z
+        for u, edges in graph.items():
+            for v, w in edges.items():
+                self.outgoing.setdefault(u, []).append(v)
+                self.incoming.setdefault(v, []).append(u)
+                self.edges[(u, v)] = w
+
+    def compute_shift(self, u, s):
+        if self.max_shift[u] < s:
+            self.max_shift[u] = s
+            val_u = self.values[u]
+            for v in self.incoming.get(u, []):
+                w = self.edges[(v, u)]
+                val_v = self.values[v]
+                self.compute_shift(v, s + val_v - (val_u + w))
+
+    def shift_nodes(self, u, s):
+        self.values[u] -= s
+        self.max_shift[u] -= s
+        for v in self.outgoing.get(u, []):
+            d = self.values[v] + self.edges[(u, v)]
+            if d < self.values[u]:
+                self.shift_nodes(v, max(d - self.values[u], self.max_shift[v]))
+
+    def fixup(self):
+        val_z = self.values[self.zero]
+
+        max_shift = 0
+        for val_u in self.values.values():
+            if val_u < val_z:
+                max_shift = min(max_shift, val_u - val_z)
+        for u in self.values:
+            if u not in self.max_shift:
+                self.max_shift[u] = max_shift
+
+        self.compute_shift(self.zero, 0)
+
+        for u, val_u in self.values.items():
+            if val_u < val_z:
+                self.shift_nodes(u, max(val_u - val_z, self.max_shift[u]))
+
+        del self.values[self.zero]
+        return list(self.values.items())
+
 
 class Graph:
     # pylint: disable=too-many-instance-attributes
@@ -265,12 +324,7 @@ class Graph:
         Get the current assignment to integer variables.
         """
         zero = Number(self._lib, 0)
-        adjust = self._potential[zero] if zero in self._potential else 0
-        return [
-            (node, adjust - potential)
-            for node, potential in self._potential.items()
-            if node != zero
-        ]
+        return Fixup(zero, self._potential, self._graph).fixup()
 
     def backtrack(self, level):
         """
@@ -311,12 +365,19 @@ class DLPropagator(Propagator):
         for atom in init.base.theory:
             term = atom.name
             if term.name == "diff" and len(term.arguments) == 0:
-                assert atom.guard is not None
+                assert atom.guard is not None and len(atom.elements) == 1 and len(atom.elements[0].tuple) == 1
                 u = _evaluate(self._lib, atom.elements[0].tuple[0].arguments[0])
                 v = _evaluate(self._lib, atom.elements[0].tuple[0].arguments[1])
                 w = _evaluate(self._lib, atom.guard[1]).number
+                if u.type == SymbolType.Number:
+                    w -= u.number
+                    u = Number(self._lib, 0)
+                if v.type == SymbolType.Number:
+                    w += v.number
+                    v = Number(self._lib, 0)
                 lit = init.solver_literal(atom.literal)
                 self._add_edge(init, lit, u, v, w)
+
 
     def propagate(
         self, assignment: Assignment, control: PropagateControl, changes: Sequence[int]
